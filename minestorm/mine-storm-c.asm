@@ -1,99 +1,3 @@
-<!DOCTYPE html>
-<html lang="en" prefix="og: http://ogp.me/ns#">
-<head>
-<meta charset="UTF-8">
-<meta name="dcterms.rights" content="Copyright 2017 &copy; Manta BlueSky, All Rights Reserved">
-<link rel="stylesheet" type="text/css" href="http://roadsidethoughts.com/urst.css">
-<link rel="author" href="https://plus.google.com/118279428097774141269/"/>
-<script type="text/javascript">
-function tdf_bof()
-{ if (top.location != location) { top.location.href = document.location.href; }
-}
-</script>
-<script type="text/javascript">
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-16983354-1']);
-_gaq.push(['_trackPageview']);
-
-_gaq.push(['_trackPageLoadTime']);
-
-(function() {
-var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-ga.src =  'http://www.google-analytics.com/ga.js';
-var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
-if (document.referrer.match(/google./gi) && document.referrer.match(/cd/gi)) {
-  var myString = document.referrer;
-  var r = myString.match(/cd=(.*?)&/);
-  var rank = parseInt(r[1]);
-  var kw = myString.match(/q=(.*?)&/);
-  if (kw[1].length > 0) {
-    var keyWord = decodeURI(kw[1]);
-  } else {
-    keyWord = "(not provided)";
-  }
-  var p = document.location.pathname;
-  _gaq.push(['_trackEvent', 'RST-GSearch', keyWord, p, rank, true]);
-}
-</script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
-<script type="application/ld+json">
-{ "@context" : "http://schema.org",
-"@type" : "WebSite",
-"name" : "RoadsideThoughts",
-"url" : "http://roadsidethoughts.com",
-"description": "A Gazetteer for the United States and Canada"
-}
-</script>
-</head>
-<body itemscope itemtype="http://schema.org/WebPage">
-
-<table class="trst">
-
-<tr><td class="vrst" colspan="2">&#160;<a id="top"></a>
-    <a class="vrst1" href="http://roadsidethoughts.com/">From RoadsideThoughts ...</a><br />
-    <a class="vrst2" href="http://roadsidethoughts.com/vectrex/">A Bit of Vectrex History</a>
-    </td></tr>
-
-<tr class="trstb"><td class="tbar" colspan="2">
-    <table class="tsct">
-    <tr><td class="tsct wd120"> &#160;<br /><a class="tsct" href="http://roadsidethoughts.com/vectrex/">Introduction</a></td>
-        <td class="tsct wd120"><a class="tsct" href="http://roadsidethoughts.com/vectrex/vectrex-programmers-guide.htm">Programmer's<br />Guide</a></td>
-        <td class="tsct wd120"> &#160;<br /><a class="tsct" href="http://roadsidethoughts.com/vectrex/the-rum.htm">The RUM</a></td>
-        <td class="tsct wd120"> &#160;<br /><a class="tsct" href="http://roadsidethoughts.com/vectrex/mine-storm.htm">Mine Storm</a></td>
-        <td class="tsct wd120"><a class="tsct" href="http://roadsidethoughts.com/vectrex/fortress-of-narzod.htm">Fortress of<br />Narzod</a></td>
-        <td class="tsct wd120"> &#160; <br /><a class="tsct" href="http://roadsidethoughts.com/vectrex/dark-tower.htm">Dark Tower</a></td>
-        <td class="vsct wd60"> &#160; </td>
-        <td class="vsct wd120"> &#160; <br /><a class="tsct" href="http://roadsidethoughts.com/sitemap.htm">Sitemap</a></td>
-    </tr></table></td></tr>
-
-
-<tr><td class="thlk"><div class="i2"><span itemscope itemtype='http://data-vocabulary.org/Breadcrumb'><a href='http://roadsidethoughts.com/' itemprop='url' title='Home page for RoadsideThoughts: A Gazetteer for the United States and Canada'><span itemprop='title'>Home</span></a> &gt;&gt; </span><span itemscope itemtype='http://data-vocabulary.org/Breadcrumb'><a href='http://roadsidethoughts.com/vectrex/' itemprop='url' title='Home page for A Bit of Vectrex History'><span itemprop='title'>Vectrex</span></a> &gt;&gt; </span><span itemscope itemtype='http://data-vocabulary.org/Breadcrumb'><a href='http://roadsidethoughts.com/vectrex/mine-storm.htm' itemprop='url' title='Mine Storm'><span itemprop='title'>Mine Storm</span></a> &gt;&gt; </span><span itemscope itemtype='http://data-vocabulary.org/Breadcrumb'><a href='http://roadsidethoughts.com/vectrex/mine-storm-c-asm.htm' itemprop='url'><span itemprop='title'> MINESTRM.ASM - Rev. C</span></a></span></div> &#160; </td><td class="tsrch rt"><form action="http://roadsidethoughts.com/search.htm" id="cse-search-box"><div><input type="hidden" name="cx" value="partner-pub-6853254609661254:i7pisc-77z3" /><input type="hidden" name="cof" value="FORID:10" /><input type="hidden" name="ie" value="ISO-8859-1" /><input type="text" name="q" size="20" /><input type="submit" name="sa" value="Search" /></div></form><script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&amp;lang=en"></script> &#160; &#160; </td></tr>
-
-</table>
-
-<table class="wd100p">
-<tr><td class="wd40">&#160;</td><td>
-<h1 class="pt">Vectrex 6809 Source Code<br /><br />Mine Storm - Rev. C</h1><hr class="pt">
-
-<div class="vh1"><h1 class="ctr">MINESTRM.ASM - Rev. C</h1></div>
-
-<br /><div class="ketr"><table><tr><td class="wd160 ctr"> 
-
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- vectrex-160x600 -->
-<ins class="adsbygoogle"
-     style="display:inline-block;width:160px;height:600px"
-     data-ad-client="ca-pub-6853254609661254"
-     data-ad-slot="2830915509"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-</td></tr></table></div>
-
-<table class="i3"><tr><td class="brd1 wd600"><pre class="pd20 lt">
-
 ;  *********************************************************
 ;  *********************************************************
 ;  ***                                                   ***
@@ -577,10 +481,10 @@ GAME1    JSR     DPRAM            ;  SET "DP" REGISTER FOR RAM
 ;
          LDD     #$0200           ;  SELECT OPTIONS
          JSR     SELOPT           ;  .
-         DEC     &lt;PLAYRS          ;  .
+         DEC     <PLAYRS          ;  .
 ;
-         CLR     &lt;TSTAT           ;  CLEAR TUNE FLAG
-         CLR     &lt;ACTPLY          ;  CLEAR ACTIVE PLAYER FLAG
+         CLR     <TSTAT           ;  CLEAR TUNE FLAG
+         CLR     <ACTPLY          ;  CLEAR ACTIVE PLAYER FLAG
 ;
          LDX     #SCOR1           ;  CLEAR PLAYERS SCORE
          JSR     SCLR             ;  .
@@ -599,24 +503,24 @@ GAME1    JSR     DPRAM            ;  SET "DP" REGISTER FOR RAM
 ;
 ;==========================================================================JJH
 ;        LDX     #MINTBL1         ;  CODE DELETED - REV. C CHANGES   ======JJH
-;        STX     &lt;TBLPTR1         ;  .                               ======JJH
-;        STX     &lt;TBLPTR2         ;  .                               ======JJH
+;        STX     <TBLPTR1         ;  .                               ======JJH
+;        STX     <TBLPTR2         ;  .                               ======JJH
 ;==========================================================================JJH
 ;
 ;==========================================================================JJH
          LDX     #MINTBL1         ;  CODE ADDED - REV. C CHANGES     ======JJH
-         STX     &lt;TBLPTR1         ;  .    SET-UP NEW MINE TABLES     ======JJH
+         STX     <TBLPTR1         ;  .    SET-UP NEW MINE TABLES     ======JJH
          LDX     #MINTBL2         ;  .    .                          ======JJH
-         STX     &lt;TBLPTR2         ;  .    .                          ======JJH
+         STX     <TBLPTR2         ;  .    .                          ======JJH
          LDB     #$08             ;  .    CLEAR NEW MINE TABLES      ======JJH
          LDX     #MINTBL1         ;  .    .                          ======JJH
          JSR     BCLR             ;  .    .                          ======JJH
 ;==========================================================================JJH
 ;
          LDA     #5               ;  SET SHIP COUNT
-         STA     &lt;SHIPCNT         ;  .
-         STA     &lt;SHIPCNT0        ;  .
-         STA     &lt;SHIPCNT1        ;  .
+         STA     <SHIPCNT         ;  .
+         STA     <SHIPCNT0        ;  .
+         STA     <SHIPCNT1        ;  .
 ;
          BRA     LVLN1            ;  LEVEL #1 ENTRY POINT IS DIFFERENT
 ;   
@@ -628,7 +532,7 @@ GAME1    JSR     DPRAM            ;  SET "DP" REGISTER FOR RAM
 LEVELN   JSR     FALL             ;  FALL-THRU TO NEXT GAME LEVEL
 ;
          LDY     #TBLPTR1         ;  BUMP GAME DATA POINTER FOR ACTIVE PLAYER
-         LDA     &lt;ACTPLY          ;  .
+         LDA     <ACTPLY          ;  .
          LDX     A,Y              ;  .
 ;
 ;==========================================================================JJH
@@ -641,7 +545,7 @@ LEVELN   JSR     FALL             ;  FALL-THRU TO NEXT GAME LEVEL
 ;==========================================================================JJH
 ;
          LDX     #PMNLVL          ;  BUMP ACTIVE MINE-FIELD COUNTER
-         LDA     &lt;ACTPLY          ;  .    WHICH PLAYER IS ACTIVE ?
+         LDA     <ACTPLY          ;  .    WHICH PLAYER IS ACTIVE ?
          LDX     A,X              ;  .    .
 ;
          LDA     5,X              ;  .    BONUS SHIP ?
@@ -655,7 +559,7 @@ LVLN01   LDD     #$0001           ;  .    BUMP GAME LEVEL
 LVLN1    JSR     SWPINT           ;  ENTRY FOR LEVEL RE-START
 ;
          LDX     #TBLPTR1         ;  .    SET-UP FOR NEXT GAME LEVEL
-         LDA     &lt;ACTPLY          ;  .    .    WHICH PLAYER IS ACTIVE
+         LDA     <ACTPLY          ;  .    .    WHICH PLAYER IS ACTIVE
          LDX     A,X              ;  .    .    .
 ;
 ;==========================================================================JJH
@@ -666,9 +570,9 @@ LVLN1    JSR     SWPINT           ;  ENTRY FOR LEVEL RE-START
          JSR     MINLAY           ;  INITIALIZE FOR GAME LEVEL
          BRA     LVLN3            ;  .
 ;
-LVLN2    LDD     &lt;TIMEOUT         ;  LOCK-UP ON GAME SEQUENCE
+LVLN2    LDD     <TIMEOUT         ;  LOCK-UP ON GAME SEQUENCE
          SUBD    #$0001           ;  .    TIME-OUT ON SEQUENCE ?
-         STD     &lt;TIMEOUT         ;  .    .
+         STD     <TIMEOUT         ;  .    .
          BEQ     LVLN21           ;  .    .
 ;
          PSHS    DP               ;  .    DISPLAY BOTH PLAYERS SCORE
@@ -679,7 +583,7 @@ LVLN2    LDD     &lt;TIMEOUT         ;  LOCK-UP ON GAME SEQUENCE
          PULS    DP               ;  .    .
 ;
 ;==========================================================================JJH
-;        LDA     &lt;TRIGGR          ;  CODE DELETED - REV. B CHANGES   ======JJH
+;        LDA     <TRIGGR          ;  CODE DELETED - REV. B CHANGES   ======JJH
 ;        BEQ     LVLN3            ;  .                               ======JJH
 ;==========================================================================JJH
 ;
@@ -692,11 +596,11 @@ LVLN2    LDD     &lt;TIMEOUT         ;  LOCK-UP ON GAME SEQUENCE
          JSR     HISCR            ;  .    .
 ;
 ;==========================================================================JJH
-         LDA     &lt;TRIGGR          ;  CODE ADDED - REV. B CHANGES     ======JJH
+         LDA     <TRIGGR          ;  CODE ADDED - REV. B CHANGES     ======JJH
          BEQ     LVLN3            ;  .                               ======JJH
 ;==========================================================================JJH
 ;
-LVLN21   LDD     &lt;TIMEOUT         ;  LOCK TIME-OUT ?
+LVLN21   LDD     <TIMEOUT         ;  LOCK TIME-OUT ?
          LBNE    NEWGAME          ;  .    START GAME OVER
 ;
 ;==========================================================================JJH
@@ -728,9 +632,9 @@ LVLN3    PSHS    DP               ;  SAVE "DP" REGISTER
          JSR     TAIL             ;  HANDLE TAIL-END LOGIC
          BCS     LVLN3            ;  .    MORE GAME LOGIC ?
 ;
-         LDA     &lt;ABORT           ;  RESTART CURRENT GAME POSITION ?
+         LDA     <ABORT           ;  RESTART CURRENT GAME POSITION ?
          LBEQ    LEVELN           ;  .    WAS GAME ABORTED ?
-         LDA     &lt;LOCK            ;  .    .    LOCK-UP ON GAME SEQUENCE ?
+         LDA     <LOCK            ;  .    .    LOCK-UP ON GAME SEQUENCE ?
          LBNE    LVLN2            ;  .    .    .
          JMP     LVLN1            ;  .    .    RESTART GAME SEQUENCE
 ;
@@ -751,21 +655,21 @@ LVLN3    PSHS    DP               ;  SAVE "DP" REGISTER
          SETDP   $C8
 ;        =====   ===
 ;
-MINLAY   STX     &lt;MINTABLE        ;  SET-UP FOR INITIAL MINE-LAYING
+MINLAY   STX     <MINTABLE        ;  SET-UP FOR INITIAL MINE-LAYING
          LDD     #$7F00           ;  .    SET POSITION OF MINE-LAYER
-         STD     &lt;LAYRYX          ;  .    .
-         STA     &lt;STAR1           ;  .    SET MINE-LAYER ZOOM VALUE
+         STD     <LAYRYX          ;  .    .
+         STA     <STAR1           ;  .    SET MINE-LAYER ZOOM VALUE
 ;
          LDA     #$20             ;  SET MINE INSERTION TIME
-         STA     &lt;TMR1            ;  .
+         STA     <TMR1            ;  .
          LDX     #INSINT          ;  .
-         STX     &lt;TMR1+1          ;  .
+         STX     <TMR1+1          ;  .
          LDX     #MIN.TBL         ;  .    SET-UP FOR MINE INSERTION
-         STX     &lt;STAR3           ;  .    .    NEXT MINE TABLE ENTRY
+         STX     <STAR3           ;  .    .    NEXT MINE TABLE ENTRY
          LDA     #MINES + 1       ;  .    .    TOTAL MINES TO INSERT
-         STA     &lt;STAR2           ;  .    .    .
+         STA     <STAR2           ;  .    .    .
 ;
-         CLR     &lt;TSTAT           ;  SET-UP FOR MINE-LAYING TUNE
+         CLR     <TSTAT           ;  SET-UP FOR MINE-LAYING TUNE
          LDU     #LAYTUNE         ;  .
          JSR     SPLAY            ;  .
 ;
@@ -774,10 +678,10 @@ MNLY1    PSHS    DP               ;  DEPOSIT INITIAL MINES
          JSR     STAIL            ;  .    DRAW EXPLOSIONS AND SHIP COUNTER
          JSR     REPLAY           ;  .    SET-UP FOR TUNE
 ;
-         LDA     &lt;FRAME           ;  .    CHANGE ZOOM VALUE ?
+         LDA     <FRAME           ;  .    CHANGE ZOOM VALUE ?
          BITA    #$01             ;  .    .
          BNE     MNLY2            ;  .    .
-         DEC     &lt;STAR1           ;  .    .    INCREMENT LAYER ZOOM VALUE
+         DEC     <STAR1           ;  .    .    INCREMENT LAYER ZOOM VALUE
 ;
 MNLY2    JSR     WAIT             ;  .    WAIT FOR FRAME BOUNDARY
          SETDP   $D0              ;  .    .
@@ -798,35 +702,35 @@ MNLY2    JSR     WAIT             ;  .    WAIT FOR FRAME BOUNDARY
 ;
          PULS    DP               ;  .    .
          SETDP   $C8              ;  .    .
-         DEC     &lt;LAYRYX          ;  .    .
+         DEC     <LAYRYX          ;  .    .
          BRA     MNLY1            ;  .    .
 ;
 ;
 MNLY3    PULS    DP               ;  GROW FOUR LARGE MINES
          SETDP   $C8              ;  .    .
 ;
-         CLR     &lt;TMR1            ;  .
+         CLR     <TMR1            ;  .
          LDA     #$04             ;  .    SET MINE COUNT
-         STA     &lt;STAR1           ;  .    .
+         STA     <STAR1           ;  .    .
          LDA     #$7F             ;  .    SET GROWING DELAY TIME
-         STA     &lt;STAR2           ;  .    .
+         STA     <STAR2           ;  .    .
 ;
-MNLY4    LDA     &lt;STAR1           ;  .    START SEQUENTIAL MINE GROWTH
+MNLY4    LDA     <STAR1           ;  .    START SEQUENTIAL MINE GROWTH
          BEQ     MNLY7            ;  .    .
 ;
-         LDB     &lt;STAR2           ;  .    .    GROWING DELAY TIME ?
+         LDB     <STAR2           ;  .    .    GROWING DELAY TIME ?
          BEQ     MNLY5            ;  .    .    .
-         DEC     &lt;STAR2           ;  .    .    .    DECREMENT DELAY TIMER
+         DEC     <STAR2           ;  .    .    .    DECREMENT DELAY TIMER
          BRA     MNLY6            ;  .    .    .    SKIP MINE GROWTH
 ;
-MNLY5    LDB     &lt;FRAME           ;  .    .    ADJUST GROWTH-TO-GROWTH TIME
+MNLY5    LDB     <FRAME           ;  .    .    ADJUST GROWTH-TO-GROWTH TIME
          ANDB    #$1F             ;  .    .    .
          BNE     MNLY6            ;  .    .    .
 ;
          DECA                     ;  .    GROW ONE LARGE MINE
-         STA     &lt;STAR1           ;  .    .    DECREMENT MINE COUNTER
+         STA     <STAR1           ;  .    .    DECREMENT MINE COUNTER
 ;
-         LDX     &lt;MINTABLE        ;  .    .    SET SEED ENTRY FOR GROWTH
+         LDX     <MINTABLE        ;  .    .    SET SEED ENTRY FOR GROWTH
          LDA     A,X              ;  .    .    .    SET MINE TYPE
          LDB     #$03             ;  .    .    .    SET MINE SIZE (LARGE)
          JSR     RANSEED          ;  .    .    .    FIND AND SET ENTRY
@@ -864,22 +768,22 @@ MNLY7    RTS                      ;  RETURN TO CALLER
 ;
 INSINT   SETDP   $C8              ;  TIMER "DP" SET TO RAM
 ;
-         DEC     &lt;STAR2           ;  END-OF-MINE INSERTION ?
+         DEC     <STAR2           ;  END-OF-MINE INSERTION ?
          BEQ     INSINT9          ;  .
 ;
-         INC     &lt;MINMAX          ;  BUMP MINE-SEED COUNTER
+         INC     <MINMAX          ;  BUMP MINE-SEED COUNTER
 ;
          JSR     RANDOM           ;  RESET INSERTION TIME
          ANDA    #$07             ;  .
          ADDA    #$04             ;  .
-         STA     &lt;TMR1            ;  .
+         STA     <TMR1            ;  .
 ;
-         LDU     &lt;STAR3           ;  INSERT INITIAL MINE BEHAVIOR PARAMETERS
+         LDU     <STAR3           ;  INSERT INITIAL MINE BEHAVIOR PARAMETERS
 ;
          LDA     #$80             ;  .    SET MINE TO INITIAL LOCATION
          STA     MIN.FLG,U        ;  .    .
 ;
-         LDD     &lt;LAYRYX          ;  .    SET SEED RESTING LOCATION
+         LDD     <LAYRYX          ;  .    SET SEED RESTING LOCATION
          ADDA    #$08             ;  .    .    FUDGE MINE UP FOR LAYER OPENING
          STA     MIN.YW,U         ;  .    .    SET WORKING VALUES
          CLR     MIN.YW+1,U       ;  .    .    .
@@ -914,7 +818,7 @@ INSINT5  STA     MIN.T2,U         ;  .    .    .    .
          CLR     MIN.SIZ,U        ;  .    SET INITIAL ZOOM VALUE
 ;
          LEAY    MIN.LEN,U        ;  .    BUMP TO NEXT ENTRY
-         STY     &lt;STAR3           ;  .    .
+         STY     <STAR3           ;  .    .
 ;
 INSINT9  RTS                      ;  RETURN TO CALLER
 ;
@@ -959,86 +863,86 @@ GSHIP    PSHS    DP               ;  SAVE ENTRY "DP"
          TFR     A,DP             ;  .
          SETDP   $C8              ;  .
 ;
-         LDA     &lt;ABORT           ;  GAME ABORTED ?
+         LDA     <ABORT           ;  GAME ABORTED ?
          LBNE    SHPON2           ;  .    SKIP STAR-SWEEPER LOGIC
 ;
-         LDA     &lt;HYPFLAG         ;  STATUS OF HYPER-SPACE SEQUENCE ?
+         LDA     <HYPFLAG         ;  STATUS OF HYPER-SPACE SEQUENCE ?
          LBNE    HYPER1           ;  .    HYPER-SPACE SEQUENCE GOING ALREADY
-         LDA     &lt;S.HYPER         ;  .    HYPER-SPACE BUTTON PRESSED ?
+         LDA     <S.HYPER         ;  .    HYPER-SPACE BUTTON PRESSED ?
          LBNE    HYPER            ;  .    .
 ;
-GSHP1    LDA     &lt;S.THRST         ;  THRUSTING ?
+GSHP1    LDA     <S.THRST         ;  THRUSTING ?
          BEQ     GSHP5            ;  .
 ;
-         LDA     &lt;SHIPROT         ;  .    THRUSTING ALONG EXISTING AXIS ?
-         CMPA    &lt;SHIPDIR1        ;  .    .    ALONG FIRST AXIS ?
+         LDA     <SHIPROT         ;  .    THRUSTING ALONG EXISTING AXIS ?
+         CMPA    <SHIPDIR1        ;  .    .    ALONG FIRST AXIS ?
          BEQ     GSHP3            ;  .    .    .
-         CMPA    &lt;SHIPDIR2        ;  .    .    ALONG SECOND AXIS ?
+         CMPA    <SHIPDIR2        ;  .    .    ALONG SECOND AXIS ?
          BEQ     GSHP2            ;  .    .    .
 ;
-         LDA     &lt;SHIPSPD1        ;  .    WHICH AXIS IS FREE ?
+         LDA     <SHIPSPD1        ;  .    WHICH AXIS IS FREE ?
          BEQ     GSHP3            ;  .    .    FIRST AXIS ?
-         LDA     &lt;SHIPSPD2        ;  .    .    SECOND AXIS ?
+         LDA     <SHIPSPD2        ;  .    .    SECOND AXIS ?
          BNE     GSHP5            ;  .    .    .
 ;
-GSHP2    LDA     &lt;SHIPSPD2        ;  .    ACCELERATE SPEED ALONG AXIS #2
+GSHP2    LDA     <SHIPSPD2        ;  .    ACCELERATE SPEED ALONG AXIS #2
          ADDA    #$0C             ;  .    .
          CMPA    #$7F             ;  .    .    MAXIMUM SPEED ?
          BHI     GSHP5            ;  .    .    .
-         STA     &lt;SHIPSPD2        ;  .    .    SAVE NEW SPEED
-         LDA     &lt;SHIPROT         ;  .    .    SET DIRECTION OF AXIS
-         STA     &lt;SHIPDIR2        ;  .    .    .
+         STA     <SHIPSPD2        ;  .    .    SAVE NEW SPEED
+         LDA     <SHIPROT         ;  .    .    SET DIRECTION OF AXIS
+         STA     <SHIPDIR2        ;  .    .    .
          BRA     GSHP4            ;  .    .    SET THRUSTER SOUND
 ;
 ;
-GSHP3    LDA     &lt;SHIPSPD1        ;  .    ACCELERATE SPEED ALONG AXIS #1
+GSHP3    LDA     <SHIPSPD1        ;  .    ACCELERATE SPEED ALONG AXIS #1
          ADDA    #$0C             ;  .    .
          CMPA    #$7F             ;  .    .    MAXIMUM SPEED ?
          BHI     GSHP5            ;  .    .    .
-         STA     &lt;SHIPSPD1        ;  .    .    SAVE NEW SPEED
-         LDA     &lt;SHIPROT         ;  .    .    SET DIRECTION OF AXIS
-         STA     &lt;SHIPDIR1        ;  .    .    .
+         STA     <SHIPSPD1        ;  .    .    SAVE NEW SPEED
+         LDA     <SHIPROT         ;  .    .    SET DIRECTION OF AXIS
+         STA     <SHIPDIR1        ;  .    .    .
 ;
 GSHP4    INC     THRSND           ;  .    .    SET THRUSTER SOUND
 ;
-GSHP5    LDA     &lt;SHIPSPD1        ;  DECELERATE SPEED ALONG FIRST AXIS
+GSHP5    LDA     <SHIPSPD1        ;  DECELERATE SPEED ALONG FIRST AXIS
          BEQ     GSHP6            ;  .
          SUBA    #$02             ;  .
-         STA     &lt;SHIPSPD1        ;  .
+         STA     <SHIPSPD1        ;  .
 ;
-         LDB     &lt;SHIPDIR1        ;  .    CALCULATE SHIP DISPLACEMENTS
+         LDB     <SHIPDIR1        ;  .    CALCULATE SHIP DISPLACEMENTS
          JSR     MLTY8            ;  .    .    FORM DISPLACEMENTS
-         STY     &lt;DSHIPY1         ;  .    .    .    SAVE 'Y' DISPLACEMENT
-         STX     &lt;DSHIPX1         ;  .    .    .    SAVE 'X' DISPLACEMENT
+         STY     <DSHIPY1         ;  .    .    .    SAVE 'Y' DISPLACEMENT
+         STX     <DSHIPX1         ;  .    .    .    SAVE 'X' DISPLACEMENT
 ;
-GSHP6    LDA     &lt;SHIPSPD2        ;  DECELERATE SPEED ALONG SECOND AXIS
+GSHP6    LDA     <SHIPSPD2        ;  DECELERATE SPEED ALONG SECOND AXIS
          BEQ     GSHP7            ;  .
          SUBA    #$02             ;  .
-         STA     &lt;SHIPSPD2        ;  .
+         STA     <SHIPSPD2        ;  .
 ;
-         LDB     &lt;SHIPDIR2        ;  .    CALCULATE SHIP DISPLACEMENTS
+         LDB     <SHIPDIR2        ;  .    CALCULATE SHIP DISPLACEMENTS
          JSR     MLTY8            ;  .    .    FORM DISPLACEMENTS
-         STY     &lt;DSHIPY2         ;  .    .    .    SAVE 'Y' DISPLACEMENT
-         STX     &lt;DSHIPX2         ;  .    .    .    SAVE 'X' DISPLACEMENT
+         STY     <DSHIPY2         ;  .    .    .    SAVE 'Y' DISPLACEMENT
+         STX     <DSHIPX2         ;  .    .    .    SAVE 'X' DISPLACEMENT
 ;
-GSHP7    LDD     &lt;WSHIPY          ;  MOVE SHIP 'Y' AXIS
-         ADDD    &lt;DSHIPY1         ;  .
-         ADDD    &lt;DSHIPY2         ;  .
-         STD     &lt;WSHIPY          ;  .
+GSHP7    LDD     <WSHIPY          ;  MOVE SHIP 'Y' AXIS
+         ADDD    <DSHIPY1         ;  .
+         ADDD    <DSHIPY2         ;  .
+         STD     <WSHIPY          ;  .
 ;
-         LDD     &lt;WSHIPX          ;  MOVE SHIP 'X' AXIS
-         ADDD    &lt;DSHIPX1         ;  .
-         ADDD    &lt;DSHIPX2         ;  .
-         STD     &lt;WSHIPX          ;  .
+         LDD     <WSHIPX          ;  MOVE SHIP 'X' AXIS
+         ADDD    <DSHIPX1         ;  .
+         ADDD    <DSHIPX2         ;  .
+         STD     <WSHIPX          ;  .
 ;
-GSHP8    LDA     &lt;POT0            ;  ROTATE STAR-SWEEPER ?
+GSHP8    LDA     <POT0            ;  ROTATE STAR-SWEEPER ?
          BEQ     SHPON1           ;  .    NO ROTATION ?
          BMI     GSHP9            ;  .    ROTATE LEFT ?
 ;
-         DEC     &lt;SHIPROT         ;  .    ROTATE RIGHT
+         DEC     <SHIPROT         ;  .    ROTATE RIGHT
          BRA     SHPON0           ;  .    .
 ;
-GSHP9    INC     &lt;SHIPROT         ;  .    ROTATE LEFT
+GSHP9    INC     <SHIPROT         ;  .    ROTATE LEFT
          BRA     SHPON0           ;  .    .
 ;
 ;
@@ -1066,45 +970,45 @@ SHPON2   PULS    DP,PC            ;  RETURN TO CALLER
 ;        =====   ===
 ;
 HYPER    LDA     #$80             ;  START HYPER-SPACE SEQUENCE
-         STA     &lt;HYPFLAG         ;  .    SET FLAG FOR RNG MIXING
+         STA     <HYPFLAG         ;  .    SET FLAG FOR RNG MIXING
          JSR     RANDOM           ;  .    SET COUNTER
          ANDA    #$03             ;  .    .
          ADDA    #$03             ;  .    .
-         STA     &lt;HYPCNT          ;  .    .
+         STA     <HYPCNT          ;  .    .
          INC     HYPSND           ;  .    SET HYPER-SPACE SOUND FLAG
 ;
-HYPER1   LDA     &lt;HYPFLAG         ;  SELECT HYPER-SPACE SEQUENCE
+HYPER1   LDA     <HYPFLAG         ;  SELECT HYPER-SPACE SEQUENCE
          BPL     HYPER30          ;  .    WAITING FOR NEW LOCATION ?
 ;
-HYPER20  DEC     &lt;HYPCNT          ;  WAIT FOR SHIP RE-APPERANCE
+HYPER20  DEC     <HYPCNT          ;  WAIT FOR SHIP RE-APPERANCE
          BEQ     HYPER21          ;  .    SEQUENCE DONE ?
 ;
          JSR     RANPOS           ;  .    STIR-UP RANDOM NUMBER GENERATOR
-         STA     &lt;WSHIPY          ;  .    .
-         CLR     &lt;WSHIPY + 1      ;  .    .
-         STB     &lt;WSHIPX          ;  .    .
-         CLR     &lt;WSHIPX + 1      ;  .    .
+         STA     <WSHIPY          ;  .    .
+         CLR     <WSHIPY + 1      ;  .    .
+         STB     <WSHIPX          ;  .    .
+         CLR     <WSHIPX + 1      ;  .    .
          PULS    DP,PC            ;  .    .
 ;
-HYPER21  LSR     &lt;HYPFLAG         ;  .    SET FLAG FOR NEXT SEQUENCE
+HYPER21  LSR     <HYPFLAG         ;  .    SET FLAG FOR NEXT SEQUENCE
          LDA     #$1F             ;  .    .
-         STA     &lt;HYPCNT          ;  .    .
+         STA     <HYPCNT          ;  .    .
          PULS    DP,PC            ;  .    .
 ;
 ;
-HYPER30  LDB     &lt;HYPCNT          ;  SHIP RE-APPERANCE
+HYPER30  LDB     <HYPCNT          ;  SHIP RE-APPERANCE
          CMPB    #$E0             ;  .
          BLE     HYPER31          ;  .
-         LDA     &lt;HYPCNT          ;  .
+         LDA     <HYPCNT          ;  .
          SUBA    #$04             ;  .
-         STA     &lt;HYPCNT          ;  .
+         STA     <HYPCNT          ;  .
 ;
          CLRA                     ;  .    DRAW STAR FIELD
          JSR     H.STARS          ;  .    .
          PULS    DP,PC            ;  .    .
 ;
-HYPER31  CLR     &lt;HYPCNT          ;  HYPER-SPACE SEQUENCE DONE
-         CLR     &lt;HYPFLAG         ;  .
+HYPER31  CLR     <HYPCNT          ;  HYPER-SPACE SEQUENCE DONE
+         CLR     <HYPFLAG         ;  .
          JSR     HSWPRST          ;  .    INITIALIZE SWEEPER PARAMETERS
 ;
          PULS    DP,PC            ;  RETURN TO CALLER
@@ -1126,7 +1030,7 @@ MSHIP    LDA     LAYRSPD          ;  IS THE MINE-LAYER ON-SCREEN ?
          SETDP   $C8              ;  .
 ;
 ;==========================================================================JJH
-;        LDA     &lt;LAYRSPD         ;  CODE DELETED - REV. C CHANGES   ======JJH
+;        LDA     <LAYRSPD         ;  CODE DELETED - REV. C CHANGES   ======JJH
 ;        BEQ     MSHIP1           ;  .                               ======JJH
 ;==========================================================================JJH
 ;
@@ -1137,15 +1041,15 @@ MSHIP    LDA     LAYRSPD          ;  IS THE MINE-LAYER ON-SCREEN ?
          NOP                      ;  .                               ======JJH
 ;==========================================================================JJH
 ;
-         LDD     &lt;WLAYRY          ;  MOVE SHIP 'Y' AXIS
-         ADDD    &lt;DLAYRY          ;  .
-         STD     &lt;WLAYRY          ;  .
-         STA     &lt;LAYRYX          ;  .
+         LDD     <WLAYRY          ;  MOVE SHIP 'Y' AXIS
+         ADDD    <DLAYRY          ;  .
+         STD     <WLAYRY          ;  .
+         STA     <LAYRYX          ;  .
 ;
-         LDD     &lt;WLAYRX          ;  MOVE SHIP 'X' AXIS
-         ADDD    &lt;DLAYRX          ;  .
-         STD     &lt;WLAYRX          ;  .
-         STA     &lt;LAYRYX+1        ;  .
+         LDD     <WLAYRX          ;  MOVE SHIP 'X' AXIS
+         ADDD    <DLAYRX          ;  .
+         STD     <WLAYRX          ;  .
+         STA     <LAYRYX+1        ;  .
 ;
          PULS    DP               ;  SET "DP" REGISTER TO I/O
          SETDP   $D0              ;  .
@@ -1168,7 +1072,7 @@ MSHIP1   RTS                      ;  RETURN TO CALLER
 BEGLAYR  SETDP   $C8              ;  TIMER "DP" SET TO RAM
 ;
          LDX     #INSLAYR         ;  SET-UP FOR GENERAL MINE-LAYER MOTION
-         STX     &lt;TMR3 + 1        ;  .
+         STX     <TMR3 + 1        ;  .
 ;
          JSR     RANDOM           ;  SELECT PRE-PROGRAMMED MINE-LAYING SEQUENCE
          LDX     #RSTABL          ;  .
@@ -1176,11 +1080,11 @@ BEGLAYR  SETDP   $C8              ;  TIMER "DP" SET TO RAM
          LDX     A,X              ;  .
 ;
          LDD     X++              ;  SET INITIAL MINE-LAYER LOCATION
-         STD     &lt;LAYRYX          ;  .
-         STA     &lt;WLAYRY          ;  .    WORKING 'Y' LOCATION
-         CLR     &lt;WLAYRY + 1      ;  .    .
-         STB     &lt;WLAYRX          ;  .    WORKING 'X' LOCATION
-         CLR     &lt;WLAYRX + 1      ;  .    .
+         STD     <LAYRYX          ;  .
+         STA     <WLAYRY          ;  .    WORKING 'Y' LOCATION
+         CLR     <WLAYRY + 1      ;  .    .
+         STB     <WLAYRX          ;  .    WORKING 'X' LOCATION
+         CLR     <WLAYRX + 1      ;  .    .
 ;
          BRA     INSLYR6          ;  FETCH MOTION MODIFICATIONS
 ;
@@ -1191,29 +1095,29 @@ BEGLAYR  SETDP   $C8              ;  TIMER "DP" SET TO RAM
 ;
 INSLAYR  SETDP   $C8              ;  TIMER "DP" SET TO RAM
 ;
-         LDA     &lt;RSMINES         ;  USE RANDOM MOTION OR PROGRAMMED SEQUENCE ?
+         LDA     <RSMINES         ;  USE RANDOM MOTION OR PROGRAMMED SEQUENCE ?
          BNE     INSLYR2          ;  .
 ;
 ;
 INSLYR1  JSR     RANDOM           ;  RANDOM MOTION
          ANDA    #$7F             ;  .    SET PARAMETER CHANGE TIME
          ADDA    #$30             ;  .    .
-         STA     &lt;TMR3            ;  .    .
+         STA     <TMR3            ;  .    .
 ;
          JSR     RANDOM           ;  .    SET MINE-LAYER DIRECTION
          ANDA    #$3F             ;  .    .
-         STA     &lt;LAYRDIR         ;  .    .
+         STA     <LAYRDIR         ;  .    .
 ;
          JSR     RANDOM           ;  .    SET MINE-LAYER SPEED
          ADDA    #$10             ;  .    .
-         STA     &lt;LAYRSPD         ;  .    .
+         STA     <LAYRSPD         ;  .    .
          BRA     INSLYR7          ;  .    .
 ;
 ;
-INSLYR2  LDA     &lt;ABORT           ;  PRE-PROGRAMMED MINE-LAYING SEQUENCE
+INSLYR2  LDA     <ABORT           ;  PRE-PROGRAMMED MINE-LAYING SEQUENCE
          BNE     INSLYR1          ;  .    GAME ABORTED ?
 ;
-;        LDA     &lt;CMINES          ;  .    ALL ACTIVE MINES DESTROYED ?
+;        LDA     <CMINES          ;  .    ALL ACTIVE MINES DESTROYED ?
 ;        BEQ     INSLYR1          ;  .    .
 ;
          LDB     #MINES           ;  .    FIND HOLE FOR NEW MINE
@@ -1228,45 +1132,45 @@ INSLYR3  LDA     0,U              ;  .    .
          BRA     INSLYR7          ;  .    .    .    WHAT THE HEY ?
 ;
 ;
-INSLYR4  INC     &lt;MINMAX          ;  .    INSERT NEW MINE
-         DEC     &lt;RSMINES         ;  .    .    DECREMENT RE-SEED MINE COUNT
+INSLYR4  INC     <MINMAX          ;  .    INSERT NEW MINE
+         DEC     <RSMINES         ;  .    .    DECREMENT RE-SEED MINE COUNT
 ;
-         LDX     &lt;WLAYRY          ;  .    .    SET MINE TO LAYER POSITION
+         LDX     <WLAYRY          ;  .    .    SET MINE TO LAYER POSITION
          STX     MIN.YW,U         ;  .    .    .    WORKING DISPLACMENETS
-         LDX     &lt;WLAYRX          ;  .    .    .    .
+         LDX     <WLAYRX          ;  .    .    .    .
          STX     MIN.XW,U         ;  .    .    .    .
 ;
          LDA     #$40             ;  .    .    SET MINE-SEED TO IDLE
          STA     MIN.FLG,U        ;  .    .    .
 ;
-         LDA     &lt;RESEED          ;  .    .    MINE RE-SEEDING ALREADY STARTED ?
+         LDA     <RESEED          ;  .    .    MINE RE-SEEDING ALREADY STARTED ?
          BNE     INSLYR5          ;  .    .    .
 ;
          LDX     #RSGROW          ;  .    .    SET-UP DELAYED MINE GROWTH
-         STX     &lt;TMR1 + 1        ;  .    .    .
+         STX     <TMR1 + 1        ;  .    .    .
          JSR     RANDOM           ;  .    .    .    SET DELAY TIME
          ANDA    #$7F             ;  .    .    .    .
          ADDA    #$40             ;  .    .    .    .
-         STA     &lt;TMR1            ;  .    .    .    .
+         STA     <TMR1            ;  .    .    .    .
 ;
-         INC     &lt;RESEED          ;  .    .    SET RE-SEEDING FLAG
+         INC     <RESEED          ;  .    .    SET RE-SEEDING FLAG
 ;
-INSLYR5  LDX     &lt;LAYRPTR         ;  .    FETCH PRE-PROGRAMMED VALUES
+INSLYR5  LDX     <LAYRPTR         ;  .    FETCH PRE-PROGRAMMED VALUES
 INSLYR6  LDA     X+               ;  .    .    SET NEXT PARAMETER CHANGE TIME
-         STA     &lt;TMR3            ;  .    .    .
+         STA     <TMR3            ;  .    .    .
 ;
          LDA     X+               ;  .    .    SET MINE-LAYER DIRECTION
-         STA     &lt;LAYRDIR         ;  .    .    .
+         STA     <LAYRDIR         ;  .    .    .
 ;
          LDA     X+               ;  .    .    SET MINE-LAYER SPEED
-         STA     &lt;LAYRSPD         ;  .    .    .
-         STX     &lt;LAYRPTR         ;  .    .    .    SAVE UPDATED SEQUENCE POINTER
+         STA     <LAYRSPD         ;  .    .    .
+         STX     <LAYRPTR         ;  .    .    .    SAVE UPDATED SEQUENCE POINTER
 ;
 ;
-INSLYR7  LDB     &lt;LAYRDIR         ;  CALCULATE SHIP DISPLACEMENTS FOR SPEED
+INSLYR7  LDB     <LAYRDIR         ;  CALCULATE SHIP DISPLACEMENTS FOR SPEED
          JSR     MLTY8            ;  .    FORM DISPLACEMENTS
-         STY     &lt;DLAYRY          ;  .    .    SAVE 'Y' DISPLACEMENT
-         STX     &lt;DLAYRX          ;  .    .    SAVE 'X' DISPLACEMENT
+         STY     <DLAYRY          ;  .    .    SAVE 'Y' DISPLACEMENT
+         STX     <DLAYRX          ;  .    .    SAVE 'X' DISPLACEMENT
 ;
          RTS                      ;  .    RETURN TO CALLER
 ;
@@ -1278,14 +1182,14 @@ INSLYR7  LDB     &lt;LAYRDIR         ;  CALCULATE SHIP DISPLACEMENTS FOR SPEED
 RSGROW   SETDP   $C8              ;  TIMER "DP" SET TO RAM
 ;
          LDU     #TBLPTR1         ;  GROW FEATURED MINE
-         LDA     &lt;ACTPLY          ;  .    SELECT POINTER FOR ACTIVE PLAYER
+         LDA     <ACTPLY          ;  .    SELECT POINTER FOR ACTIVE PLAYER
          LDU     A,U              ;  .    .
          LDA     0,U              ;  .    SET MINE TYPE
          LDB     #3               ;  .    SET MINE SIZE
          JSR     RANSEED          ;  .    FIND AND SET ENTRY
 ;
          LDX     #FRCGROW         ;  SET-UP FOR FORCED MINE GROWTH
-         STX     &lt;TMR1 + 1        ;  .
+         STX     <TMR1 + 1        ;  .
 ;
          RTS                      ;  .    RETURN TO CALLER
 ;
@@ -1296,10 +1200,10 @@ RSGROW   SETDP   $C8              ;  TIMER "DP" SET TO RAM
 ;
 FRCGROW  SETDP   $C8              ;  TIMER "DP" SET TO RAM
 ;
-         DEC     &lt;FRCTIME         ;  DOWN-COUNT FORCE TIMER
+         DEC     <FRCTIME         ;  DOWN-COUNT FORCE TIMER
          BEQ     FRC1             ;  .
          LDA     #$FF             ;  .    RESET TIMER #1
-         STA     &lt;TMR1            ;  .    .
+         STA     <TMR1            ;  .    .
          BRA     FRC9             ;  .    SKIP FORCED MINE GROWTH
 ;
 FRC1     JSR     RANDOM           ;  FETCH RANDOM NUMBER FOR MINE SIZE
@@ -1309,7 +1213,7 @@ FRC1     JSR     RANDOM           ;  FETCH RANDOM NUMBER FOR MINE SIZE
          ADDB    #$01             ;  .    .    .
 ;
 FRC2     LDU     #TBLPTR1         ;  GROW FEATURED MINE
-         LDA     &lt;ACTPLY          ;  .    SELECT POINTER FOR ACTIVE PLAYER
+         LDA     <ACTPLY          ;  .    SELECT POINTER FOR ACTIVE PLAYER
          LDU     A,U              ;  .    .
          LDA     0,U              ;  .    SET MINE TYPE
          JSR     RANSEED          ;  .    FIND AND SET ENTRY
@@ -1491,19 +1395,19 @@ MOVMAG   LDA     HYPFLAG          ;  HYPER-SPACE ACTIVE ?
          JSR     DPRAM            ;  SET "DP" REGISTER TO RAM
          SETDP   $C8              ;  .
 ;
-         LDA     &lt;WSHIPY          ;  CALCULATE DELTA YX VALUES
+         LDA     <WSHIPY          ;  CALCULATE DELTA YX VALUES
          SUBA    MIN.YW,U         ;  .
-         LDB     &lt;WSHIPX          ;  .
+         LDB     <WSHIPX          ;  .
          SUBB    MIN.XW,U         ;  .
 ;
          JSR     CMPASS           ;  .    CALCULATE ANGLE TO SHIP
          SUBA    #$10             ;  .    .
-         STA     &lt;ETMP1           ;  .    .
+         STA     <ETMP1           ;  .    .
 ;
          LDX     #MINSPD          ;  .    CALCULATE NEW DISPLACEMENTS
          LDB     MIN.BSZ,U        ;  .    .    FETCH MINE SPEED FOR SIZE
          LDA     B,X              ;  .    .    .
-         LDB     &lt;ETMP1           ;  .    .    FETCH DIRECTION
+         LDB     <ETMP1           ;  .    .    FETCH DIRECTION
          JSR     MLTY8            ;  .    .    FETCH NEW DISPLACEMENTS
          STY     MIN.YD,U         ;  .    .    .    SAVE 'Y' DISPLACEMENT
          STX     MIN.XD,U         ;  .    .    .    SAVE 'X' DISPLACEMENT
@@ -1776,7 +1680,7 @@ SHPCNT1  DEC     TEMP1            ;  .    DRAW THIS SHIP ?
 SHPCNT9  PULS    DP               ;  SET "DP" REGISTER TO RAM
          SETDP   $C8              ;  .
 ;
-         LDA     &lt;FRAME           ;  ROTATE FIREBALL
+         LDA     <FRAME           ;  ROTATE FIREBALL
          ANDA    #$01             ;  .    FORM ROTATION ANGLE
          LSLA                     ;  .    .
          LSLA                     ;  .    .
@@ -1785,22 +1689,22 @@ SHPCNT9  PULS    DP               ;  SET "DP" REGISTER TO RAM
          LDU     #PACKET2         ;  .    FETCH DESTINATION PACKET ADDRESS
          JSR     PROT             ;  .    ROTATE PACKET
 ;
-         LDB     &lt;CEXPLS          ;  END-OF-SEQUENCE
+         LDB     <CEXPLS          ;  END-OF-SEQUENCE
          BNE     TAIL1            ;  .    EXPLOSIONS DONE ?
-         LDA     &lt;ABORT           ;  .    GAME ABORTED ?
+         LDA     <ABORT           ;  .    GAME ABORTED ?
          BNE     TAIL0            ;  .    .
 ;
 ;==========================================================================JJH
-;        LDB     &lt;CMINES          ;  CODE DELETED - REV. C CHANGES   ======JJH
+;        LDB     <CMINES          ;  CODE DELETED - REV. C CHANGES   ======JJH
 ;        BNE     TAIL1            ;  .                               ======JJH
-;        LDB     &lt;MINMAX          ;  .                               ======JJH
+;        LDB     <MINMAX          ;  .                               ======JJH
 ;        BNE     TAIL1            ;  .                               ======JJH
 ;==========================================================================JJH
 ;
 ;==========================================================================JJH
-         LDB     &lt;CMINES          ;  CODE ADDED - REV. C CHANGES     ======JJH
-         ORB     &lt;MINMAX          ;  .                               ======JJH
-         ORB     &lt;LAYRSPD         ;  .                               ======JJH
+         LDB     <CMINES          ;  CODE ADDED - REV. C CHANGES     ======JJH
+         ORB     <MINMAX          ;  .                               ======JJH
+         ORB     <LAYRSPD         ;  .                               ======JJH
          BNE     TAIL1            ;  .                               ======JJH
 ;==========================================================================JJH
 ;
@@ -1821,7 +1725,7 @@ DSHPEXP  PSHS    A,X,Y            ;  SAVE ENTRY VALUES
          JSR     POSWID           ;  .
 ;
          LDA     0,S              ;  POSITION SHIP FRAGMENT
-         STA     &lt;T1LOLC          ;  .
+         STA     <T1LOLC          ;  .
          TFR     Y,D              ;  .
          JSR     POSITN           ;  .
 ;
@@ -1865,7 +1769,7 @@ STEX2    LDA     0,S              ;  ENTER EXPLOSION PARAMETERS
          STA     EXP.FLG,X        ;  .    .
 ;
          BPL     STEX3            ;  .    .    EXPLOSION FATAL TO SWEEPER ?
-         INC     &lt;ABORT           ;  .    .    .    SET ABORT FLAG
+         INC     <ABORT           ;  .    .    .    SET ABORT FLAG
 ;
 STEX3    LDA     0,S              ;  .    SET STARTING EXPLOSION SIZE
          ANDA    #$7F             ;  .    .
@@ -1877,7 +1781,7 @@ STEX3    LDA     0,S              ;  .    SET STARTING EXPLOSION SIZE
          LDD     2,S              ;  .    SET EXPLOSION CENTRE
          STD     EXP.YX,X         ;  .    .
 ;
-         INC     &lt;CEXPLS          ;  .    BUMP ACTIVE EXPLOSION COUNTER
+         INC     <CEXPLS          ;  .    BUMP ACTIVE EXPLOSION COUNTER
          INC     EXPLSND          ;  .    TRIGGER EXPLOSION SOUND
 ;
 STEX4    PULS    A,B,X,PC         ;  RETURN TO CALLER
@@ -1956,10 +1860,10 @@ SWPINT   LDA     #$D0             ;  SET "DP" REGISTER TO I/O
          TFR     A,DP             ;  .
          SETDP   $C8              ;  .
 ;
-         CLR     &lt;TMR1            ;  CLEAR PROGRAMMABLE TIMERS
-         CLR     &lt;TMR2            ;  .
-         CLR     &lt;TMR3            ;  .
-         CLR     &lt;TMR4            ;  .
+         CLR     <TMR1            ;  CLEAR PROGRAMMABLE TIMERS
+         CLR     <TMR2            ;  .
+         CLR     <TMR3            ;  .
+         CLR     <TMR4            ;  .
 ;
          LDX     #BLT.TBL         ;  CLEAR TABLES
 CLROBJ   CLR     X+               ;  .
@@ -1967,34 +1871,34 @@ CLROBJ   CLR     X+               ;  .
          BNE     CLROBJ           ;  .
 ;
          LDD     #$0000           ;  CLEAR MINE-LAYER PARAMETERS
-         STD     &lt;WLAYRY          ;  .
-         STD     &lt;WLAYRX          ;  .
-         STD     &lt;DLAYRY          ;  .
-         STD     &lt;DLAYRX          ;  .
-         STA     &lt;LAYRSPD         ;  .    CLEAR LAYER SPEED
+         STD     <WLAYRY          ;  .
+         STD     <WLAYRX          ;  .
+         STD     <DLAYRY          ;  .
+         STD     <DLAYRX          ;  .
+         STA     <LAYRSPD         ;  .    CLEAR LAYER SPEED
 ;
-         STA     &lt;ABORT           ;  RESET ABORT FLAG
-         STA     &lt;LOCK            ;  RESET LOCK-UP FLAG
+         STA     <ABORT           ;  RESET ABORT FLAG
+         STA     <LOCK            ;  RESET LOCK-UP FLAG
 ;
-         STA     &lt;CBULLET         ;  CLEAR ACTIVE BULLET COUNTER
-         STA     &lt;CMINES          ;  CLEAR ACTIVE MINE COUNTER
-         STA     &lt;CEXPLS          ;  CLEAR ACTIVE EXPLOSION COUNTER
+         STA     <CBULLET         ;  CLEAR ACTIVE BULLET COUNTER
+         STA     <CMINES          ;  CLEAR ACTIVE MINE COUNTER
+         STA     <CEXPLS          ;  CLEAR ACTIVE EXPLOSION COUNTER
 ;
          STA     SEXP1            ;  SET SHIP EXPLOSION COUNTERS
          LDB     #$40             ;  .    SHIP EXPLOSION DURATION
          STB     SEXPCNT          ;  .    .
 ;
-         STA     &lt;MINMAX          ;  RESET MINE-SEED COUNTER
-         STA     &lt;RESEED          ;  RESET MINE RE-SEEDING COUNTER
+         STA     <MINMAX          ;  RESET MINE-SEED COUNTER
+         STA     <RESEED          ;  RESET MINE RE-SEEDING COUNTER
 ;
          LDX     #$0800           ;  SET LONG TIME-OUT DELAY
          STX     TIMEOUT          ;  .
 ;
          LDA     #$07             ;  SET MINE RE-SEED COUNT
-         STA     &lt;RSMINES         ;  .
+         STA     <RSMINES         ;  .
 ;
          LDX     #BEGLAYR         ;  SET-UP FOR FIRST MINE-LAYER MODIFICATION
-         STX     &lt;TMR3 + 1        ;  .
+         STX     <TMR3 + 1        ;  .
 ;
 ;
 ;  RESET STAR-SWEEPER PARAMETERS
@@ -2002,27 +1906,27 @@ CLROBJ   CLR     X+               ;  .
 ;
 ;
 SWPRST   LDD     #0               ;  CLEAR STAR-SWEEPER PARAMETERS
-         STD     &lt;WSHIPY          ;  .    WORKING POSITIONS
-         STD     &lt;WSHIPX          ;  .    .
+         STD     <WSHIPY          ;  .    WORKING POSITIONS
+         STD     <WSHIPX          ;  .    .
 ;
 HSWPRST  LDD     #$0000           ;  .    SHIP ROTATION
-         STA     &lt;SHIPROT         ;  .    .
-         STD     &lt;DSHIPY1         ;  .    AXIS #1 DISPLACEMENTS
-         STD     &lt;DSHIPX1         ;  .    .
-         STA     &lt;SHIPSPD1        ;  .    .    CLEAR SHIP SPEED
-         STA     &lt;SHIPDIR1        ;  .    .    CLEAR SHIP DIRECTION
-         STD     &lt;DSHIPY2         ;  .    AXIS #2 DISPLACEMENTS
-         STD     &lt;DSHIPX2         ;  .    .
-         STA     &lt;SHIPSPD2        ;  .    .    CLEAR SHIP SPEED
-         STA     &lt;SHIPDIR2        ;  .    .    CLEAR SHIP DIRECTION
+         STA     <SHIPROT         ;  .    .
+         STD     <DSHIPY1         ;  .    AXIS #1 DISPLACEMENTS
+         STD     <DSHIPX1         ;  .    .
+         STA     <SHIPSPD1        ;  .    .    CLEAR SHIP SPEED
+         STA     <SHIPDIR1        ;  .    .    CLEAR SHIP DIRECTION
+         STD     <DSHIPY2         ;  .    AXIS #2 DISPLACEMENTS
+         STD     <DSHIPX2         ;  .    .
+         STA     <SHIPSPD2        ;  .    .    CLEAR SHIP SPEED
+         STA     <SHIPDIR2        ;  .    .    CLEAR SHIP DIRECTION
 ;
-SWPROT   LDA     &lt;SHIPROT         ;  ROTATE SWEEPER
+SWPROT   LDA     <SHIPROT         ;  ROTATE SWEEPER
          LDX     #NSHIP           ;  .
          LDU     #PACKET1         ;  .
          JSR     PROT             ;  .
 ;
          LDA     #$7F             ;  CALCULATE NEW BULLET DISPLACEMENTS
-         LDB     &lt;SHIPROT         ;  .    FETCH DIRECTION
+         LDB     <SHIPROT         ;  .    FETCH DIRECTION
          JSR     MLTY16           ;  .    FORM DISPLACEMENTS
          STY     DBLTY            ;  .    .    SAVE 'Y' DISPLACEMENT
          STX     DBLTX            ;  .    .    SAVE 'X' DISPLACEMENT
@@ -2045,29 +1949,29 @@ FALL     PSHS    X,Y              ;  SAVE THE INDEX REGISTERS
          PULS    DP               ;  SET "DP" REGISTER TO RAM
 ;
          LDA     #$A0             ;  SET MINIMUM FALL-THRU TIME
-         STA     &lt;TEMP1           ;  .
+         STA     <TEMP1           ;  .
 ;
-FALL1    LDA     &lt;WSHIPY          ;  MOVE SHIP TO CENTER POSITION
+FALL1    LDA     <WSHIPY          ;  MOVE SHIP TO CENTER POSITION
          BEQ     FALL2            ;  .    'Y' AXIS
          BMI     FALL10           ;  .    .
          DECA                     ;  .    .    CURRENT POSITION POSITIVE
          BRA     FALL11           ;  .    .    .
 ;
 FALL10   INCA                     ;  .    .    CURRENT POSITION NEGATIVE
-FALL11   STA     &lt;WSHIPY          ;  .    .    .
-         CLR     &lt;WSHIPY + 1      ;  .    .    .
+FALL11   STA     <WSHIPY          ;  .    .    .
+         CLR     <WSHIPY + 1      ;  .    .    .
 ;
-FALL2    LDA     &lt;WSHIPX          ;  .    'X' AXIS
+FALL2    LDA     <WSHIPX          ;  .    'X' AXIS
          BEQ     FALL3            ;  .    .
          BMI     FALL20           ;  .    
          DECA                     ;  .    .    CURRENT POSITION POSITIVE
          BRA     FALL21           ;  .    .    .
 ;
 FALL20   INCA                     ;  .    .    CURRENT POSITION NEGATIVE
-FALL21   STA     &lt;WSHIPX          ;  .    .    .
-         CLR     &lt;WSHIPX + 1      ;  .    .    .
+FALL21   STA     <WSHIPX          ;  .    .    .
+         CLR     <WSHIPX + 1      ;  .    .    .
 ;
-FALL3    LDA     &lt;SHIPROT         ;  .    ROTATION
+FALL3    LDA     <SHIPROT         ;  .    ROTATION
          BEQ     FALL4            ;  .    .
          CMPA    #$1F             ;  .    .
          BGT     FALL30           ;  .    .    ROTATE LEFT
@@ -2076,7 +1980,7 @@ FALL3    LDA     &lt;SHIPROT         ;  .    ROTATION
 ;
 FALL30   INCA                     ;  .    .    ROTATE RIGHT
 FALL31   ANDA    #$3F             ;  .    .    .
-         STA     &lt;SHIPROT         ;  .    .    .
+         STA     <SHIPROT         ;  .    .    .
 ;
 FALL4    JSR     SHPONLY          ;  ROTATE AND DISPLAY STAR-SWEEPER
 ;
@@ -2102,13 +2006,13 @@ FALL5    LDA     0,X              ;  .
          PULS    DP               ;  SET "DP" REGISTER TO RAM
          SETDP   $C8              ;  .
 ;  
-FALL91   LDA     &lt;WSHIPY          ;  FALL-THRU COMPLETED ?
+FALL91   LDA     <WSHIPY          ;  FALL-THRU COMPLETED ?
          LBNE    FALL1            ;  .
-         LDA     &lt;WSHIPX          ;  .
+         LDA     <WSHIPX          ;  .
          LBNE    FALL1            ;  .
-         LDA     &lt;SHIPROT         ;  .
+         LDA     <SHIPROT         ;  .
          LBNE    FALL1            ;  .
-         DEC     &lt;TEMP1           ;  .    END-OF-SEQUENCE ?
+         DEC     <TEMP1           ;  .    END-OF-SEQUENCE ?
          LBNE    FALL1            ;  .    .
 ;
          JSR     SWPINT           ;  RESET VALUES
@@ -2204,7 +2108,7 @@ ST.010   JSR     ZERGND           ;  TURN-OFF CRT GUN AND ZERO INTEGRATORS
          BLS     ST.000           ;  .    IF SO, FETCH NEXT STAR FIELD
          SUBB    2,S              ;  .    MODIFY VECTOR LENGTH WITH ZOOM VALUE
          BLE     ST.000           ;  .    .
-         STB     &lt;T1LOLC          ;  .    SET VECTOR LENGTH
+         STB     <T1LOLC          ;  .    SET VECTOR LENGTH
 ;
          LDX     #FSTAR           ;  FETCH STAR FIELD POINTER
          LSLA                     ;  .
@@ -2259,7 +2163,7 @@ ST.210   JSR     ZERGND           ;  TURN-OFF CRT GUN AND ZERO INTEGRATORS
          ADDB    2,S              ;  .
          BLE     ST.200           ;  .    SKIP THIS STAR FIELD ?
          ANDB    #$7F             ;  .    SET VECTOR LENGTH
-         STB     &lt;T1LOLC          ;  .    .
+         STB     <T1LOLC          ;  .    .
 ;
          LDX     #FSTAR           ;  FETCH STAR FIELD POINTER
          LDA     0,S              ;  .
@@ -2309,13 +2213,13 @@ RANPOS1  JSR     RANDOM           ;  'X' POSITION
 ;
 RANSEED  PSHS    A,B,X,Y,U        ;  SAVE ENTRY VALUES
 ;
-         LDA     &lt;MINMAX          ;  ALL THE MINES DISPLAYED ?
+         LDA     <MINMAX          ;  ALL THE MINES DISPLAYED ?
          LBEQ    RANS9            ;  .
-         DEC     &lt;MINMAX          ;  .
+         DEC     <MINMAX          ;  .
 ;
          JSR     RANDOM           ;  SET-UP FOR RANDOM ENTRY
          ANDA    #$1F             ;  .    ENTRY MUST BE BETWEEN $00 AND $1B
-RANS1    STA     &lt;ETMP9           ;  .    .
+RANS1    STA     <ETMP9           ;  .    .
          CMPA    #27              ;  .    .
          BLS     RANS2            ;  .    .
          SUBA    #$4              ;  .    .    TOO BIG - FUDGE DOWN
@@ -2329,12 +2233,12 @@ RANS2    LDB     #MIN.LEN         ;  .    CALCULATE ACTUAL MINE ENTRY
          LDA     MIN.FLG,U        ;  .    MINE ENTRY ACTIVE ?
          ANDA    #$C0             ;  .    .    MOVING TO INITIAL POSITION OR IDLE ?
          BNE     RANS3            ;  .    .
-         INC     &lt;ETMP9           ;  .    .    TRY ANOTHER ENTRY
-         LDA     &lt;ETMP9           ;  .    .    .
+         INC     <ETMP9           ;  .    .    TRY ANOTHER ENTRY
+         LDA     <ETMP9           ;  .    .    .
          CMPA    #27              ;  .    .    .    STILL WITHIN RANGE ?
          BLE     RANS2            ;  .    .    .    .
 ;
-         CLR     &lt;ETMP9           ;  .    .    .    OUT-OF-RANGE
+         CLR     <ETMP9           ;  .    .    .    OUT-OF-RANGE
          CLRA                     ;  .    .    .    .
          BRA     RANS2            ;  .    .    .    .
 ;
@@ -2344,7 +2248,7 @@ RANS3    LDA     0,S              ;  .    SET MINE TYPE
          LDX     #MINSCR          ;  .    SELECT MINE'S BASIC SCORE
          ASLA                     ;  .    .
          LDY     A,X              ;  .    .
-         STY     &lt;ETMP7           ;  .    .
+         STY     <ETMP7           ;  .    .
 ;
          LDB     #$20             ;  .    SET ZOOM FLAG
          STB     MIN.FLG,U        ;  .    .
@@ -2352,7 +2256,7 @@ RANS3    LDA     0,S              ;  .    SET MINE TYPE
          LDX     #MINSPD          ;  .    SELECT MINE SPEED
          LDA     1,S              ;  .    .    FETCH MINE SIZE
          LDB     A,X              ;  .    .
-         STB     &lt;ETMP9           ;  .    .
+         STB     <ETMP9           ;  .    .
 ;
          LDX     #MINSZ           ;  .    SET MINE SIZE
          LDB     A,X              ;  .    .
@@ -2366,36 +2270,36 @@ RANS3    LDA     0,S              ;  .    SET MINE TYPE
 ;
          LDX     #MINSSCR         ;  .    SELECT MINE'S SCORE VS. SPEED VALUE
          LDY     A,X              ;  .    .
-         STY     &lt;ETMP5           ;  .    .
+         STY     <ETMP5           ;  .    .
 ;
          CMPA    #$06             ;  .    SET 'POP' SOUND
          BNE     RANS4            ;  .    .    BIG MINES ONLY
          INC     POPSND           ;  .    .    .
 ;
-RANS4    LDA     &lt;ETMP5 + 1       ;  .    CALCULATE MINE SCORE VALUE
-         ADDA    &lt;ETMP7 + 1       ;  .    .    LSB
+RANS4    LDA     <ETMP5 + 1       ;  .    CALCULATE MINE SCORE VALUE
+         ADDA    <ETMP7 + 1       ;  .    .    LSB
          DAA                      ;  .    .    .
          STA     MIN.SCR+1,U      ;  .    .    .
-         LDA     &lt;ETMP5           ;  .    .    MSB
-         ADCA    &lt;ETMP7           ;  .    .    .
+         LDA     <ETMP5           ;  .    .    MSB
+         ADCA    <ETMP7           ;  .    .    .
          DAA                      ;  .    .    .
          STA     MIN.SCR,U        ;  .    .    .
 ;
-         LDA     &lt;ETMP9           ;  .    CALCULATE MINE DISPLACEMENTS
+         LDA     <ETMP9           ;  .    CALCULATE MINE DISPLACEMENTS
          JSR     CONE             ;  .    .    SELECT ANGLE
          JSR     MLTY8            ;  .    .    FORM DISPLACEMENTS
          STY     MIN.YD,U         ;  .    .    .    SAVE 'Y' DISPLACEMENTS
          STX     MIN.XD,U         ;  .    .    .    SAVE 'X' DISPLACEMENTS
 ;
-         INC     &lt;CMINES          ;  .    BUMP ACTIVE MINE COUNTER
+         INC     <CMINES          ;  .    BUMP ACTIVE MINE COUNTER
 ;
-         LDA     &lt;RESEED          ;  .    RESET FORCED MINE GROWTH TIMER
+         LDA     <RESEED          ;  .    RESET FORCED MINE GROWTH TIMER
          BEQ     RANS9            ;  .    .    SKIP IF NOT RE-SEEDED
 ;
          LDA     #$FF             ;  .    .    RESET TIMER #1
-         STA     &lt;TMR1            ;  .    .    .
+         STA     <TMR1            ;  .    .    .
          LDA     #$03             ;  .    .    RESET FORCE COUNTER
-         STA     &lt;FRCTIME         ;  .    .    .
+         STA     <FRCTIME         ;  .    .    .
 ;
 RANS9    PULS    A,B,X,Y,U,PC     ;  RETURN TO CALLER
 ;   
@@ -2449,7 +2353,7 @@ CONE2    ADDB    1,S              ;  ADD QUADRANT TO DIRECTION
 ADOT     PSHS    A,B              ;  SAVE ENTRY VALUES
 ;
          LDA     #$7F             ;  POSITION DOT
-         STA     &lt;T1LOLC          ;  .    SET VECTOR LENGTH
+         STA     <T1LOLC          ;  .    SET VECTOR LENGTH
          TFR     Y,D              ;  .    SET 'YX' POSITION
          JSR     DOTAB            ;  .    .
 ;
@@ -2474,7 +2378,7 @@ ADOT     PSHS    A,B              ;  SAVE ENTRY VALUES
 DDOT     PSHS    A,B              ;  SAVE ENTRY VALUES
 ;
          LDA     #$7F             ;  POSITION DOT
-         STA     &lt;T1LOLC          ;  .    SET VECTOR LENGTH
+         STA     <T1LOLC          ;  .    SET VECTOR LENGTH
 ;
          LDA     0,Y              ;  .    SET 'YX' POSITION
          LDB     2,Y              ;  .    .
@@ -2554,7 +2458,7 @@ DPACK    PSHS    A,B,X            ;  SAVE ENTRY VALUES
 MESS     PSHS    A,B,X,U          ;  SAVE ENTRY VALUES
 ;
          LDA     #$7F             ;  POSITION PACKET
-         STA     &lt;T1LOLC          ;  .    SET VECTOR LENGTH
+         STA     <T1LOLC          ;  .    SET VECTOR LENGTH
 ;
          JSR     RSTSIZ           ;  DRAW RASTER MESSAGE
 ;
@@ -2653,27 +2557,27 @@ WAIT     JSR     FRWAIT           ;  WAIT FOR FRAME BOUNDARY
          TFR     A,DP             ;  .
          SETDP   $C8              ;  .
 ;
-TIMER    LDA     &lt;TMR1            ;  DOWN-COUNT TIMER #1
+TIMER    LDA     <TMR1            ;  DOWN-COUNT TIMER #1
          BEQ     DCT2             ;  .    IS TIMER INHIBITED ?
-         DEC     &lt;TMR1            ;  .
+         DEC     <TMR1            ;  .
          BNE     DCT2             ;  .
          JSR     [TMR1+1]         ;  .    EXECUTE THE USER PROGRAM
 ;
-DCT2     LDA     &lt;TMR2            ;  DOWN-COUNT TIMER #2
+DCT2     LDA     <TMR2            ;  DOWN-COUNT TIMER #2
          BEQ     DCT3             ;  .    IS TIMER INHIBITED ?
-         DEC     &lt;TMR2            ;  .
+         DEC     <TMR2            ;  .
          BNE     DCT3             ;  .
          JSR     [TMR2+1]         ;  .    EXECUTE THE USER PROGRAM
 ;
-DCT3     LDA     &lt;TMR3            ;  DOWN-COUNT TIMER #3
+DCT3     LDA     <TMR3            ;  DOWN-COUNT TIMER #3
          BEQ     DCT4             ;  .    IS TIMER INHIBITED ?
-         DEC     &lt;TMR3            ;  .
+         DEC     <TMR3            ;  .
          BNE     DCT4             ;  .
          JSR     [TMR3+1]         ;  .    EXECUTE THE USER PROGRAM
 ;
-DCT4     LDA     &lt;TMR4            ;  DOWN-COUNT TIMER #4
+DCT4     LDA     <TMR4            ;  DOWN-COUNT TIMER #4
          BEQ     WAIT9            ;  .    IS TIMER INHIBITED ?
-         DEC     &lt;TMR4            ;  .
+         DEC     <TMR4            ;  .
          BNE     WAIT9            ;  .
          JSR     [TMR4+1]         ;  .    EXECUTE THE USER PROGRAM
 ;
@@ -2686,23 +2590,23 @@ WAIT9    PULS    DP,PC            ;  RETURN TO CALLER
          SETDP   $C8
 ;        =====   ===
 ;
-CBULMIN  LDA     &lt;CBULLET         ;  ACTIVE BULLETS ?
+CBULMIN  LDA     <CBULLET         ;  ACTIVE BULLETS ?
          BEQ     CBUL20           ;  .
 ;
          LDY     #BLT.TBL         ;  FIND BULLET TO COMPARE WITH
          LDA     #BULLETS         ;  .
-         STA     &lt;TEMP1           ;  .
+         STA     <TEMP1           ;  .
 ;
 CBUL1    TST     BLT.FLG,Y        ;  .    BULLET ACTIVE ?
          BNE     CBUL3            ;  .    .
 ;
 CBUL2    LEAY    BLT.LEN,Y        ;  .    BUMP TO NEXT ENTRY
-         DEC     &lt;TEMP1           ;  .    .    END OF TABLE ?
+         DEC     <TEMP1           ;  .    .    END OF TABLE ?
          BNE     CBUL1            ;  .    .    .
 CBUL20   RTS                      ;  .    RETURN - NO ACTIVE BULLET FOUND
 ;
 ;
-CBUL3    LDA     &lt;LAYRSPD         ;  COMPARE BULLET VS. MINE-LAYER
+CBUL3    LDA     <LAYRSPD         ;  COMPARE BULLET VS. MINE-LAYER
          BEQ     CBUL30           ;  .    IS MINE-LAYER OFF-SCREEN ?
 ;
          PSHS    Y                ;  .    FINE COLLISION TEST
@@ -2710,40 +2614,40 @@ CBUL3    LDA     &lt;LAYRSPD         ;  COMPARE BULLET VS. MINE-LAYER
          LDB     BLT.WX,Y         ;  .    .    .
          TFR     D,X              ;  .    .    .
          LDD     #P.LYRBX         ;  .    .    FETCH MINE-LAYER BOX SIZE
-         LDY     &lt;LAYRYX          ;  .    .    FETCH MINE-LAYER POSITION
+         LDY     <LAYRYX          ;  .    .    FETCH MINE-LAYER POSITION
          JSR     BXTEST           ;  .    .    DO BOX TEST
          PULS    Y                ;  .    .    .    FAILED COLLISION ?
          BCC     CBUL30           ;  .    .    .    .
 ;
          CLR     BLT.FLG,Y        ;  .    COLLISION DETECTED - RESET CONDITIONS
-         CLR     &lt;LAYRSPD         ;  .    .    RESET MINE LAYER
-         CLR     &lt;TMR3            ;  .    .    .    INSERTION TIMER
+         CLR     <LAYRSPD         ;  .    .    RESET MINE LAYER
+         CLR     <TMR3            ;  .    .    .    INSERTION TIMER
 ;
          LDX     #SCRPTR          ;  .    .    ADD POINTS TO ACTIVE PLAYER SCORE
-         LDA     &lt;ACTPLY          ;  .    .    .    PLAYER #1 OR #2 ?
+         LDA     <ACTPLY          ;  .    .    .    PLAYER #1 OR #2 ?
          LDX     A,X              ;  .    .    .    .
          LDD     #$1000           ;  .    .    .
          JSR     SCRADD           ;  .    .    .
 ;
          LDA     #$30             ;  .    .    ENTER COLLISION IN EXPLOSION TABLE
          LDB     #$70             ;  .    .    .    SET EXPLOSION SIZE
-         LDX     &lt;LAYRYX          ;  .    .    .    SET EXPLOSION CENTRE
+         LDX     <LAYRYX          ;  .    .    .    SET EXPLOSION CENTRE
          JSR     SETEXP           ;  .    .    .    SET EXPLOSION IN TABLE
 ;
-         DEC     &lt;CBULLET         ;  .    .    DECREMENT ACTIVE BULLET COUNTER
+         DEC     <CBULLET         ;  .    .    DECREMENT ACTIVE BULLET COUNTER
          BRA     CBUL20           ;  .    .    .
 ;
 ;
 CBUL30   LDU     #MIN.TBL         ;  FIND MINE TO COMPARE AGAINST BULLET
          LDA     #MINES           ;  .
-         STA     &lt;TEMP2           ;  .
+         STA     <TEMP2           ;  .
 ;
 CBUL4    LDA     MIN.FLG,U        ;  .    MINE ACTIVE ?
          ANDA    #$3F             ;  .    .
          BNE     CBUL6            ;  .    .
 ;
 CBUL5    LEAU    MIN.LEN,U        ;  .    BUMP TO NEXT ENTRY
-         DEC     &lt;TEMP2           ;  .    .    END OF TABLE ?
+         DEC     <TEMP2           ;  .    .    END OF TABLE ?
          BNE     CBUL4            ;  .    .    .
          BRA     CBUL2            ;  .    NO ACTIVE MINE FOUND - NEXT BULLET
 ;
@@ -2765,7 +2669,7 @@ CBUL6    PSHS    Y                ;  .    FINE COLLISION TEST
 ;
 ;
          LDX     #SCRPTR          ;  'FIRE-BALL' RELEASED
-         LDA     &lt;ACTPLY          ;  .    ADD MINE TO ACTIVE PLAYER SCORE
+         LDA     <ACTPLY          ;  .    ADD MINE TO ACTIVE PLAYER SCORE
          LDX     A,X              ;  .    .    PLAYER #1 OR #2 ?
          LDD     MIN.SCR,U        ;  .    .   
          JSR     SCRADD           ;  .    .
@@ -2782,9 +2686,9 @@ CBUL6    PSHS    Y                ;  .    FINE COLLISION TEST
          LDD     #$0110           ;  .    CHANGE SCORE VALUE FOR FIRE-BALL
          STD     MIN.SCR,U        ;  .    .
 ;
-         LDA     &lt;WSHIPY          ;  .    CALCULATE DELTA YX VALUES
+         LDA     <WSHIPY          ;  .    CALCULATE DELTA YX VALUES
          SUBA    MIN.YW,U         ;  .    .
-         LDB     &lt;WSHIPX          ;  .    .
+         LDB     <WSHIPX          ;  .    .
          SUBB    MIN.XW,U         ;  .    .
 ;
          JSR     CMPASS           ;  .    CALCULATE ANGLE TO SHIP
@@ -2814,7 +2718,7 @@ CBUL6    PSHS    Y                ;  .    FINE COLLISION TEST
 CBUL60   LDA     #$04             ;  .    SET FIRE-BALL FLAG
          STA     MIN.PAK,U        ;  .    .
 ;
-         DEC     &lt;CBULLET         ;  .    DECREMENT ACTIVE BULLET COUNT
+         DEC     <CBULLET         ;  .    DECREMENT ACTIVE BULLET COUNT
          JMP     CBUL2            ;  .    TRY NEXT BULLET FOR COLLISION
 ;
 ;
@@ -2823,7 +2727,7 @@ CBUL7    LDA     #$01             ;  'DUMB' OR 'MAGNETIC' MINE COLLISION
          CLR     BLT.FLG,Y        ;  .    RESET BULLET
 ;
          LDX     #SCRPTR          ;  .    ADD MINE TO ACTIVE PLAYER SCORE
-         LDA     &lt;ACTPLY          ;  .    .    PLAYER #1 OR #2 ?
+         LDA     <ACTPLY          ;  .    .    PLAYER #1 OR #2 ?
          LDX     A,X              ;  .    .    .
          LDD     MIN.SCR,U        ;  ADD MINE TO SCORE
          JSR     SCRADD           ;  .
@@ -2835,8 +2739,8 @@ CBUL7    LDA     #$01             ;  'DUMB' OR 'MAGNETIC' MINE COLLISION
          LDB     #$40             ;  .    SET EXPLOSION MAXIMUM SIZE
          JSR     SETEXP           ;  .    SET EXPLOSION IN TABLE
 ;
-         DEC     &lt;CMINES          ;  .    DECREMENT ACTIVE MINE COUNT
-         DEC     &lt;CBULLET         ;  .    DECREMENT ACTIVE BULLET COUNT
+         DEC     <CMINES          ;  .    DECREMENT ACTIVE MINE COUNT
+         DEC     <CBULLET         ;  .    DECREMENT ACTIVE BULLET COUNT
 CBUL9    JMP     CBUL2            ;  .    TRY NEXT BULLET FOR COLLISION
 ;
 ;
@@ -2846,28 +2750,28 @@ CBUL9    JMP     CBUL2            ;  .    TRY NEXT BULLET FOR COLLISION
          SETDP   $C8
 ;        =====   ===
 ;
-CMINSHIP LDA     &lt;ABORT           ;  GAME ABORTED ?
+CMINSHIP LDA     <ABORT           ;  GAME ABORTED ?
          BNE     CMIN3            ;  .    SKIP COLLISION DETECTION
 ;
-         LDA     &lt;HYPFLAG         ;  .    HYPER-SPACE SEQUENCE ?
+         LDA     <HYPFLAG         ;  .    HYPER-SPACE SEQUENCE ?
          BNE     CMIN3            ;  .    .
 :
          LDY     #MIN.TBL         ;  FIND MINE TO COMPARE WITH
          LDA     #MINES           ;  .
-         STA     &lt;TEMP1           ;  .
+         STA     <TEMP1           ;  .
 ;
 CMIN1    LDA     MIN.FLG,Y        ;  .    MINE ACTIVE ?
          ANDA    #$3F             ;  .    .
          BNE     CMIN4            ;  .    .
 ;
 CMIN2    LEAY    MIN.LEN,Y        ;  .    BUMP TO NEXT ENTRY
-         DEC     &lt;TEMP1           ;  .    .    END OF TABLE ?
+         DEC     <TEMP1           ;  .    .    END OF TABLE ?
          BNE     CMIN1            ;  .    .    .
 CMIN3    RTS                      ;  .    RETURN - NO ACTIVE MINE
 ;
 CMIN4    PSHS    Y                ;  FINE COLLISION TEST
-         LDA     &lt;WSHIPY          ;  .    FETCH SHIP POSITION
-         LDB     &lt;WSHIPX          ;  .    .
+         LDA     <WSHIPY          ;  .    FETCH SHIP POSITION
+         LDB     <WSHIPX          ;  .    .
          TFR     D,X              ;  .    .
          LDA     MIN.YW,Y         ;  .    FETCH MINE POSITION
          LDB     MIN.XW,Y         ;  .    .
@@ -2878,10 +2782,10 @@ CMIN4    PSHS    Y                ;  FINE COLLISION TEST
          BCC     CMIN2            ;  .    .    .
 ;
          CLR     MIN.FLG,Y        ;  COLLISION DETECTED - RESET CONDITIONS
-         CLR     &lt;MINMAX          ;  .    RESET TOTAL MINE COUNT
+         CLR     <MINMAX          ;  .    RESET TOTAL MINE COUNT
 ;
-         LDA     &lt;WSHIPY          ;  ENTER COLLISION IN EXPLOSION TABLE
-         LDB     &lt;WSHIPX          ;  .    SET EXPLOSION CENTRE
+         LDA     <WSHIPY          ;  ENTER COLLISION IN EXPLOSION TABLE
+         LDB     <WSHIPX          ;  .    SET EXPLOSION CENTRE
          TFR     D,X              ;  .    .
          LDA     MIN.SIZ,Y        ;  .    SET STARTING EXPLOSION SIZE
          ORA     #$80             ;  .    .    FATAL HIT TO SWEEPER
@@ -2890,7 +2794,7 @@ CMIN4    PSHS    Y                ;  FINE COLLISION TEST
 ;
          INC     EXPLSND          ;  SET EXPLOSION SOUND FLAG
 ;
-         DEC     &lt;CMINES          ;  DECREMENT ACTIVE MINE COUNT
+         DEC     <CMINES          ;  DECREMENT ACTIVE MINE COUNT
          BRA     CMIN3            ;  TRY NEXT MINE ENTRY
 ;
 ;
@@ -2900,29 +2804,29 @@ CMIN4    PSHS    Y                ;  FINE COLLISION TEST
          SETDP   $C8
 ;        =====   ===
 ;
-CSHPLYR  LDA     &lt;ABORT           ;  GAME ABORTED ?
+CSHPLYR  LDA     <ABORT           ;  GAME ABORTED ?
          BNE     CSHP0            ;  .    SKIP COLLISION DETECTION
 ;
-         LDA     &lt;HYPFLAG         ;  .    HYPER-SPACE SEQUENCE ?
+         LDA     <HYPFLAG         ;  .    HYPER-SPACE SEQUENCE ?
          BNE     CSHP0            ;  .    .
 ;
-         LDA     &lt;LAYRSPD         ;  MINE-LAYER OFF-SCREEN ?
+         LDA     <LAYRSPD         ;  MINE-LAYER OFF-SCREEN ?
          BEQ     CSHP0            ;  .    IF SO, SKIP COLLISION DETECTION
 ;
-         LDA     &lt;WSHIPY          ;  PERFORM FINE BOX TEST
-         LDB     &lt;WSHIPX          ;  .    FETCH SHIP POSITION
+         LDA     <WSHIPY          ;  PERFORM FINE BOX TEST
+         LDB     <WSHIPX          ;  .    FETCH SHIP POSITION
          TFR     D,X              ;  .    .
          LDD     #P.LYRBX         ;  .    FETCH MINE-LAYER COLLISION BOX
-         LDY     &lt;LAYRYX          ;  .    FETCH MINE-LAYER POSITION
+         LDY     <LAYRYX          ;  .    FETCH MINE-LAYER POSITION
          JSR     BXTEST           ;  .    DO BOX TEST
          BCS     CSHP1            ;  .    .    PASS COLLISION TEST ?
 CSHP0    RTS                      ;  .    .    .    NO COLLISION - RETURN
 ;
-CSHP1    CLR     &lt;LAYRSPD         ;  COLLISION DETECTED - RESET MINE-LAYER
-         CLR     &lt;TMR3            ;  .
+CSHP1    CLR     <LAYRSPD         ;  COLLISION DETECTED - RESET MINE-LAYER
+         CLR     <TMR3            ;  .
 ;
-         LDA     &lt;WSHIPY          ;  ENTER COLLISION IN EXPLOSION TABLE
-         LDB     &lt;WSHIPX          ;  .    SET EXPLOSION CENTRE
+         LDA     <WSHIPY          ;  ENTER COLLISION IN EXPLOSION TABLE
+         LDB     <WSHIPX          ;  .    SET EXPLOSION CENTRE
          TFR     D,X              ;  .    .
          LDA     #P.LYRSZ         ;  .    SET STARTING EXPLOSION SIZE
          ORA     #$80             ;  .    .    FATAL TO SWEEPER
@@ -3511,80 +3415,3 @@ REVC.19  RTS                      ;  .    RETURN TO CALLER           ======JJH
 ;
 ;
          END
-
-</pre></td></tr></table>
-
-<br /><br />&#160;</td><td class="wd30">&#160;</td></tr>
-<tr><td>&#160;</td><td>
-
-<table class="ctr">
-
-
-<tr><td class="fsrch lt"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- link-vectrex -->
-<ins class="adsbygoogle"
-     style="display:inline-block;width:468px;height:15px"
-     data-ad-client="ca-pub-6853254609661254"
-     data-ad-slot="7097834702"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-</td><td class="fsrch rt">
-<form action="http://roadsidethoughts.com/search.htm" id="cse-search-box2">
-<div>
-<input type="hidden" name="cx" value="partner-pub-6853254609661254:i7pisc-77z3" />
-<input type="hidden" name="cof" value="FORID:10" />
-<input type="hidden" name="ie" value="ISO-8859-1" />
-<input type="text" name="q" size="20" />
-<input type="submit" name="sa" value="Search" />
-</div>
-</form>
-<script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box2&amp;lang=en"></script>
-</td></tr>
-
-
-   <tr><td class="ctr">
-   <table><tr><td colspan="5"> &#160; </td></tr><tr><td colspan="5"> &#160; </td></tr><tr><td colspan="5"> &#160; </td></tr>
-       <tr><td class="ctr" colspan="5"><hr class="ctr wd750 ht2"></td></tr>
-
-   <tr><td class="fbar"><a href="http://roadsidethoughts.com/vectrex/"
-               title="Return to our Vectrex home page">Home<br />Page</a></td>
-
-       <td class="fbar"><a href="http://roadsidethoughts.com/sitemap.htm"
-               title="Having trouble navigating our website?  Our sitemap might help">Sitemap</a></td>
-
-       <td class="fbar"><a href="http://roadsidethoughts.com/privacy.htm"
-               title="Our statement about the privacy of your visit">Privacy<br />Statement</a></td>
-
-       <td class="fbar"><a href="http://roadsidethoughts.com/terms.htm"
-               title="The terms, conditions and notices that govern your use of the information from RoadsideThoughts">Terms<br />of Use</a></td>
-
-       <td class="fbar"><a href="http://roadsidethoughts.com/vectrex/feedback.htm"
-               title="How to contact us">Feedback</a></td>
-
-   </tr><tr><td class="ctr" colspan="5"><hr class="ctr wd750 ht2"></td></tr>
-   </table></td></tr>
-
-
-   <tr><td>&#160;</td></tr>
-   <tr><td>&#160;</td></tr>
-   <tr><td class="lt">
-   <table class="wd100p"><tr><td class="ftn">
-       <p class="ftn">Please keep in mind that we can not guarantee the accuracy or timeliness of the information
-       on this website, so use with care.  We encourage you to double-check the information that is critical to you.</p>
-       <p class="ftn">If you've found an error or have additional information that you would like to share,
-       please don't hesitate to write. <a href="http://roadsidethoughts.com/vectrex/feedback.htm">Click here to contact us.</a></p></td>
-       <td class="fcpy"><div class="fcpy"></div>Copyright 2016 <br />All Rights Reserved</td></tr>
-       </table>
-       </td></tr>
-
-
-   <tr><td class="flm">This page was last modified: 12 Jan 2017</td></tr>
-   <tr><td class="flm">By John Hall</td></tr>
-
-
-   <tr><td>&#160;</td></tr></table>
-
-&#160;</td><td>&#160;</td></tr>
-</table>
-</body></html>
