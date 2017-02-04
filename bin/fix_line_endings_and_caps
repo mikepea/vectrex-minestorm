@@ -1,0 +1,61 @@
+#!/bin/bash
+
+set -x
+
+dos2unix $1
+sed -i'' 's/ \(ORG[ $]\)/ \L\1/' $1
+sed -i'' 's/ \(END[ $]\)/ \L\1/' $1
+sed -i'' 's/ \(EQU[ $]\)/ \L\1/' $1
+sed -i'' 's/ \(D[BSW][ $]\)/ \L\1/' $1
+sed -i'' 's/ \(JMP[ $]\)/ \L\1/' $1
+sed -i'' 's/ \(CLR[ $]\)/ \L\1/' $1
+sed -i'' 's/ \(RTS[ $]\)/ \L\1/' $1
+sed -i'' 's/ \(RTI[ $]\)/ \L\1/' $1
+sed -i'' 's/ \(TST[ $]\)/ \L\1/' $1
+sed -i'' 's/ \(JSR[ $]\)/ \L\1/' $1
+sed -i'' 's/ \(TFR[ $]\)/ \L\1/' $1
+sed -i'' 's/ \(EXG[ $]\)/ \L\1/' $1
+sed -i'' 's/ \(NOP[ $]\)/ \L\1/' $1
+sed -i'' 's/ \(LEA[UXY][ $]\)/ \L\1/' $1
+sed -i'' 's/ \(SEX[ $]\)/ \L\1/' $1
+sed -i'' 's/ \(PSHS[ $]\)/ \L\1/' $1
+sed -i'' 's/ \(PULS[ $]\)/ \L\1/' $1
+sed -i'' 's/ \(ANDCC[ $]\)/ \L\1/' $1
+sed -i'' 's/ \(ORCC[ $]\)/ \L\1/' $1
+sed -i'' 's/ \(AND[AB][ $]\)/ \L\1/' $1
+sed -i'' 's/ \(OR[AB][ $]\)/ \L\1/' $1
+sed -i'' 's/ \([L]*BRA[ $]\)/ \L\1/' $1
+sed -i'' 's/ \([L]*BCC[ $]\)/ \L\1/' $1
+sed -i'' 's/ \([L]*BCS[ $]\)/ \L\1/' $1
+sed -i'' 's/ \([L]*BEQ[ $]\)/ \L\1/' $1
+sed -i'' 's/ \([L]*BNE[ $]\)/ \L\1/' $1
+sed -i'' 's/ \([L]*BHI[ $]\)/ \L\1/' $1
+sed -i'' 's/ \([L]*BLO[ $]\)/ \L\1/' $1
+sed -i'' 's/ \([L]*BMI[ $]\)/ \L\1/' $1
+sed -i'' 's/ \([L]*BPL[ $]\)/ \L\1/' $1
+sed -i'' 's/ \([L]*BVS[ $]\)/ \L\1/' $1
+sed -i'' 's/ \([L]*BVC[ $]\)/ \L\1/' $1
+sed -i'' 's/ \([L]*BGE[ $]\)/ \L\1/' $1
+sed -i'' 's/ \([L]*BLE[ $]\)/ \L\1/' $1
+sed -i'' 's/ \([L]*BHS[ $]\)/ \L\1/' $1
+sed -i'' 's/ \([L]*BGT[ $]\)/ \L\1/' $1
+sed -i'' 's/ \([L]*BLT[ $]\)/ \L\1/' $1
+sed -i'' 's/ \([L]*BSR[ $]\)/ \L\1/' $1
+sed -i'' 's/ \([L]*BLS[ $]\)/ \L\1/' $1
+sed -i'' 's/ \(LD[ABDUXY][ $]\)/ \L\1/' $1
+sed -i'' 's/ \(ST[ABDUXY][ $]\)/ \L\1/' $1
+sed -i'' 's/ \(TST[ABDUXY][ $]\)/ \L\1/' $1
+sed -i'' 's/ \(CMP[ABDUXY][ $]\)/ \L\1/' $1
+sed -i'' 's/ \(ADD[ABD][ $]\)/ \L\1/' $1
+sed -i'' 's/ \(ADC[ABD][ $]\)/ \L\1/' $1
+sed -i'' 's/ \(SUB[ABD][ $]\)/ \L\1/' $1
+sed -i'' 's/ \(INC[AB]*[ $]\)/ \L\1/' $1
+sed -i'' 's/ \(DEC[AB]*[ $]\)/ \L\1/' $1
+sed -i'' 's/ \(CLR[AB]*[ $]\)/ \L\1/' $1
+sed -i'' 's/ \(LSR[AB]*[ $]\)/ \L\1/' $1
+sed -i'' 's/ \(LSL[AB]*[ $]\)/ \L\1/' $1
+sed -i'' 's/ \(ASL[AB]*[ $]\)/ \L\1/' $1
+sed -i'' 's/ \(ASR[AB]*[ $]\)/ \L\1/' $1
+sed -i'' 's/ \(BIT[AB][ $]\)/ \L\1/' $1
+sed -i'' 's/ \(ROL[AB][ $]\)/ \L\1/' $1
+sed -i'' 's/ \(ROR[AB][ $]\)/ \L\1/' $1
