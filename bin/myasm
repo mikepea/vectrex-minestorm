@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -x
+
+for src_file in $*; do
+  /usr/local/bin/as09 -w200 -h0 -l -mcti $src_file
+done
