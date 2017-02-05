@@ -609,7 +609,7 @@ LVLN21   ldd     <TIMEOUT         ;  LOCK TIME-OUT ?
 ;==========================================================================JJH
 ;
 ;==========================================================================JJH
-         jmp     REVB.0           ;  CODE ADDED - REV. B CHANGES     ======JJH
+         jmp     REVB_0           ;  CODE ADDED - REV. B CHANGES     ======JJH
          nop                      ;  .    FILLER                     ======JJH
          nop                      ;  .    .                          ======JJH
          nop                      ;  .    .                          ======JJH
@@ -1005,7 +1005,7 @@ HYPER30  ldb     <HYPCNT          ;  SHIP RE-APPERANCE
          sta     <HYPCNT          ;  .
 ;
          clra                     ;  .    DRAW STAR FIELD
-         jsr     H.STARS          ;  .    .
+         jsr     H_STARS          ;  .    .
          puls    dp,pc            ;  .    .
 ;
 HYPER31  clr     <HYPCNT          ;  HYPER-SPACE SEQUENCE DONE
@@ -2039,9 +2039,9 @@ ST_101   stx     ,y++
          leax    8,x
          sta     ,u+
          adda    #$0F
-         DECB
+         decb
          bne     ST_101
-         RTS
+         rts
 ;
 ;
 ;  ZOOM STAR FIELDS FORWARD AND DISPLAY
@@ -2137,7 +2137,7 @@ ST_010   jsr     ZERGND           ;  TURN-OFF CRT GUN AND ZERO INTEGRATORS
          direct  $D0
 ;        =====   ===
 ;
-H.STARS  pshs    a,b,x,dp         ;  SAVE ENTRY VALUES
+H_STARS  pshs    a,b,x,dp         ;  SAVE ENTRY VALUES
 ;
          lda     #$D0             ;  SET "DP" REGISTER TO I/O
          tfr     a,dp             ;  .
@@ -2231,7 +2231,7 @@ RANS1    sta     <ETMP9           ;  .    .
          bra     RANS1            ;  .    .    .
 ;
 RANS2    ldb     #MIN_LEN         ;  .    CALCULATE ACTUAL MINE ENTRY
-         MUL                      ;  .    .
+         mul                      ;  .    .
          addd    #MIN_TBL         ;  .    .
          tfr     d,u             ;  .    .
 ;
@@ -2283,11 +2283,11 @@ RANS3    lda     0,s              ;  .    SET MINE TYPE
 ;
 RANS4    lda     <ETMP5 + 1       ;  .    CALCULATE MINE SCORE VALUE
          adda    <ETMP7 + 1       ;  .    .    LSB
-         DAA                      ;  .    .    .
+         daa                      ;  .    .    .
          sta     MIN_SCR+1,u     ;  .    .    .
          lda     <ETMP5           ;  .    .    MSB
          adca    <ETMP7           ;  .    .    .
-         DAA                      ;  .    .    .
+         daa                      ;  .    .    .
          sta     MIN_SCR,u       ;  .    .    .
 ;
          lda     <ETMP9           ;  .    CALCULATE MINE DISPLACEMENTS
@@ -2760,7 +2760,7 @@ CMINSHIP lda     <ABORT           ;  GAME ABORTED ?
 ;
          lda     <HYPFLAG         ;  .    HYPER-SPACE SEQUENCE ?
          bne     CMIN3            ;  .    .
-:
+;
          ldy     #MIN_TBL         ;  FIND MINE TO COMPARE WITH
          lda     #MINES           ;  .
          sta     <TEMP1           ;  .
@@ -3397,7 +3397,7 @@ LAYER    db      $00,$18,$00      ;  LOW RESOLUTION MINE-LAYER PACKET
          direct  $00              ;  CODE ADDED - REV. B CHANGES     ======JJH
 ;        =====   ===                                                 ======JJH
 ;                                                                    ======JJH
-REVB.0   clr     FRAME - 1        ;  .    CLEAR HOUSE FOR RESTART    ======JJH
+REVB_0   clr     FRAME - 1        ;  .    CLEAR HOUSE FOR RESTART    ======JJH
          clr     FRAME            ;  .    .                          ======JJH
          clr     LEG              ;  .    .                          ======JJH
          jmp     COLD0            ;  .    .    RESTART VECTREX       ======JJH
@@ -3419,4 +3419,4 @@ REVC_19  rts                      ;  .    RETURN TO CALLER           ======JJH
 ;==========================================================================JJH
 ;
 ;
-         END
+         end
