@@ -434,7 +434,7 @@ ENDRAM   db      0                ;  END-OF-RAM FLAG
 ;  POWER-UP INITIALIZATION
 ;  =======================
 ;
-         SETDP   $D0
+         direct  $D0
 ;        =====   ===
 ;
 ENTRY    ldx     #ETMP1           ;  CLEAR MEMORY
@@ -477,7 +477,7 @@ CLRMEM   clr     X+               ;  .
          bra     GAME1            ;  .
 ;
 GAME1    jsr     DPRAM            ;  SET "DP" REGISTER FOR RAM
-         SETDP   $C8              ;  .
+         direct  $C8              ;  .
 ;
          ldd     #$0200           ;  SELECT OPTIONS
          jsr     SELOPT           ;  .
@@ -624,7 +624,7 @@ LVLN3    pshs    DP               ;  SAVE "DP" REGISTER
          jsr     MSHIP            ;  HANDLE MINE-LAYER GAME LOGIC
 ;
          puls    DP               ;  SET "DP" REGISTER TO RAM
-         SETDP   $C8              ;  .
+         direct  $C8              ;  .
 ;
          jsr     CBULMIN          ;  HANDLE BULLET/MINE COLLISIONS
          jsr     CMINSHIP         ;  HANDLE SHIP/MINE COLLISIONS
@@ -652,7 +652,7 @@ LVLN3    pshs    DP               ;  SAVE "DP" REGISTER
 ;  HANDLE MINE-LAYING SEQUENCE
 ;  ===========================
 ;
-         SETDP   $C8
+         direct  $C8
 ;        =====   ===
 ;
 MINLAY   stx     <MINTABLE        ;  SET-UP FOR INITIAL MINE-LAYING
@@ -684,7 +684,7 @@ MNLY1    pshs    DP               ;  DEPOSIT INITIAL MINES
          dec     <STAR1           ;  .    .    INCREMENT LAYER ZOOM VALUE
 ;
 MNLY2    jsr     WAIT             ;  .    WAIT FOR FRAME BOUNDARY
-         SETDP   $D0              ;  .    .
+         direct  $D0              ;  .    .
          jsr     SCRBTH           ;  .    DISPLAY BOTH PLAYER'S SCORES
          jsr     REQOUT           ;  .    PLAY LAYING TUNE
          jsr     GMINE            ;  .    HANDLE MINE GAME LOGIC
@@ -701,13 +701,13 @@ MNLY2    jsr     WAIT             ;  .    WAIT FOR FRAME BOUNDARY
          jsr     APACK            ;  .    .    .
 ;
          puls    DP               ;  .    .
-         SETDP   $C8              ;  .    .
+         direct  $C8              ;  .    .
          dec     <LAYRYX          ;  .    .
          bra     MNLY1            ;  .    .
 ;
 ;
 MNLY3    puls    DP               ;  GROW FOUR LARGE MINES
-         SETDP   $C8              ;  .    .
+         direct  $C8              ;  .    .
 ;
          clr     <TMR1            ;  .
          lda     #$04             ;  .    SET MINE COUNT
@@ -737,7 +737,7 @@ MNLY5    ldb     <FRAME           ;  .    .    ADJUST GROWTH-TO-GROWTH TIME
 ;
 MNLY6    pshs    DP               ;  .    WAIT FOR FRAME BOUNDARY
          jsr     WAIT             ;  .    .
-         SETDP   $D0              ;  .    .
+         direct  $D0              ;  .    .
 ;
          jsr     INTMAX           ;  .    DISPLAY ACTIVE MINE-FIELD MESSAGE
          ldu     #M.MNFLD         ;  .    .    DRAW MINE-FIELD MESSAGE
@@ -753,7 +753,7 @@ MNLY6    pshs    DP               ;  .    WAIT FOR FRAME BOUNDARY
          jsr     GBULLET          ;  .    HANDLE BULLET GAME LOGIC
 ;
          puls    DP               ;  .    SET "DP" REGISTER TO RAM
-         SETDP   $C8              ;  .    .
+         direct  $C8              ;  .    .
 ;
          jsr     CBULMIN          ;  .    HANDLE BULLET/MINE COLLISIONS
          jsr     TAIL             ;  .    HANDLE TAIL-END LOGIC
@@ -766,7 +766,8 @@ MNLY7    rts                      ;  RETURN TO CALLER
 ;  ======================
 ;
 ;
-INSINT   SETDP   $C8              ;  TIMER "DP" SET TO RAM
+INSINT:
+         direct  $C8              ;  TIMER "DP" SET TO RAM
 ;
          dec     <STAR2           ;  END-OF-MINE INSERTION ?
          beq     INSINT9          ;  .
@@ -861,7 +862,7 @@ MINOBJ   dw      MINE1            ;  MINE PACKET TABLE
 GSHIP    pshs    DP               ;  SAVE ENTRY "DP"
          lda     #$C8             ;  SET "DP" REGISTER TO RAM
          tfr     A,DP             ;  .
-         SETDP   $C8              ;  .
+         direct  $C8              ;  .
 ;
          lda     <ABORT           ;  GAME ABORTED ?
          lbne    SHPON2           ;  .    SKIP STAR-SWEEPER LOGIC
@@ -952,7 +953,7 @@ SHPON0   jsr     SWPROT           ;  ROTATE STAR-SWEEPER
 ;
 SHPON1   lda     #$D0             ;  SET "DP" REGISTER TO I/O
          tfr     A,DP             ;  .
-         SETDP   $D0              ;  .
+         direct  $D0              ;  .
 ;
          jsr     INT3Q            ;  DISPLAY MINE-SWEEPER
          ldb     #P.SHPSZ         ;  .    SET SIZE
@@ -966,7 +967,7 @@ SHPON2   puls    DP,PC            ;  RETURN TO CALLER
 ;  HYPER-SPACE SEQUENCE
 ;  ====================
 ;
-         SETDP   $C8
+         direct  $C8
 ;        =====   ===
 ;
 HYPER    lda     #$80             ;  START HYPER-SPACE SEQUENCE
@@ -1018,7 +1019,7 @@ HYPER31  clr     <HYPCNT          ;  HYPER-SPACE SEQUENCE DONE
 ;  MINE-LAYER GAME LOGIC
 ;  =======================
 ;
-         SETDP   $D0
+         direct  $D0
 ;        =====   ===
 ;
 MSHIP    lda     LAYRSPD          ;  IS THE MINE-LAYER ON-SCREEN ?
@@ -1027,7 +1028,7 @@ MSHIP    lda     LAYRSPD          ;  IS THE MINE-LAYER ON-SCREEN ?
          pshs    DP               ;  SAVE ENTRY "DP"
          lda     #$C8             ;  SET "DP" REGISTER TO RAM
          tfr     A,DP             ;  .
-         SETDP   $C8              ;  .
+         direct  $C8              ;  .
 ;
 ;==========================================================================JJH
 ;        lda     <LAYRSPD         ;  CODE DELETED - REV. C CHANGES   ======JJH
@@ -1052,7 +1053,7 @@ MSHIP    lda     LAYRSPD          ;  IS THE MINE-LAYER ON-SCREEN ?
          sta     <LAYRYX+1        ;  .
 ;
          puls    DP               ;  SET "DP" REGISTER TO I/O
-         SETDP   $D0              ;  .
+         direct  $D0              ;  .
 ;
          jsr     INT3Q            ;  DISPLAY MINI MINE-LAYER
          ldb     #P.LYRSZ         ;  .    SET SIZE
@@ -1069,7 +1070,8 @@ MSHIP1   rts                      ;  RETURN TO CALLER
 ;        FIRST MINE-LAYER MOTION MODIFICATION
 ;        ------------------------------------
 ;
-BEGLAYR  SETDP   $C8              ;  TIMER "DP" SET TO RAM
+BEGLAYR:
+         direct  $C8              ;  TIMER "DP" SET TO RAM
 ;
          ldx     #INSLAYR         ;  SET-UP FOR GENERAL MINE-LAYER MOTION
          stx     <TMR3 + 1        ;  .
@@ -1093,7 +1095,8 @@ BEGLAYR  SETDP   $C8              ;  TIMER "DP" SET TO RAM
 ;        ---------------------------------------
 ;
 ;
-INSLAYR  SETDP   $C8              ;  TIMER "DP" SET TO RAM
+INSLAYR:
+         direct  $C8              ;  TIMER "DP" SET TO RAM
 ;
          lda     <RSMINES         ;  USE RANDOM MOTION OR PROGRAMMED SEQUENCE ?
          bne     INSLYR2          ;  .
@@ -1179,7 +1182,8 @@ INSLYR7  ldb     <LAYRDIR         ;  CALCULATE SHIP DISPLACEMENTS FOR SPEED
 ;        -----------------------------
 ;
 ;
-RSGROW   SETDP   $C8              ;  TIMER "DP" SET TO RAM
+RSGROW:
+         direct  $C8              ;  TIMER "DP" SET TO RAM
 ;
          ldu     #TBLPTR1         ;  GROW FEATURED MINE
          lda     <ACTPLY          ;  .    SELECT POINTER FOR ACTIVE PLAYER
@@ -1198,7 +1202,8 @@ RSGROW   SETDP   $C8              ;  TIMER "DP" SET TO RAM
 ;        --------------------------
 ;
 ;
-FRCGROW  SETDP   $C8              ;  TIMER "DP" SET TO RAM
+FRCGROW:
+         direct  $C8              ;  TIMER "DP" SET TO RAM
 ;
          dec     <FRCTIME         ;  DOWN-COUNT FORCE TIMER
          beq     FRC1             ;  .
@@ -1286,7 +1291,7 @@ RESEED4  dw      $0080            ;  RE-SEED SEQUENCE #4
 ;  BULLET GAME LOGIC
 ;  =================
 ;
-         SETDP   $D0
+         direct  $D0
 ;        =====   ===
 ;
 GBULLET  lda     #BULLETS         ;  DISPLAY 'BULLETS' TABLE
@@ -1351,7 +1356,7 @@ GBLT4    lda     ABORT            ;  .    ZERO ENTRY FOUND, GAME ABORTED ?
 ;  MINE GAME LOGIC
 ;  ===============
 ;
-         SETDP   $D0
+         direct  $D0
 ;        =====   ===
 ;
 GMINE    lda     #MINES           ;  SET-UP TO DISPLAY MINE TABLE
@@ -1393,7 +1398,7 @@ MOVMAG   lda     HYPFLAG          ;  HYPER-SPACE ACTIVE ?
 ;
          pshs    DP               ;  SAVE ENTRY "DP"
          jsr     DPRAM            ;  SET "DP" REGISTER TO RAM
-         SETDP   $C8              ;  .
+         direct  $C8              ;  .
 ;
          lda     <WSHIPY          ;  CALCULATE DELTA YX VALUES
          suba    MIN.YW,U         ;  .
@@ -1413,7 +1418,7 @@ MOVMAG   lda     HYPFLAG          ;  HYPER-SPACE ACTIVE ?
          stx     MIN.XD,U         ;  .    .    .    SAVE 'X' DISPLACEMENT
 ;
          puls    DP               ;  .    RECOVER DIRECT REGISTER
-         SETDP   $D0              ;  .    .
+         direct  $D0              ;  .    .
 ;
 ;
 MOVDUMB  ldd     MIN.YW,U         ;  CALCULATE NEW ABSOLUTE 'Y' VALUE
@@ -1542,7 +1547,7 @@ MBOOM9   jmp     GMIN2            ;  .    DO NEXT MINE ENTRY
 ;
 TAIL     pshs    DP               ;  SET "DP" REGISTER TO I/O
          jsr     DPIO             ;  .
-         SETDP   $D0              ;  .
+         direct  $D0              ;  .
 ;
 DEXPL    jsr     INTMAX           ;  DRAW EXPLOSIONS
          ldu     #EXP.TBL         ;  .
@@ -1678,7 +1683,7 @@ SHPCNT1  dec     TEMP1            ;  .    DRAW THIS SHIP ?
          bra     SHPCNT1          ;  .    .    DO IT AGAIN
 ;
 SHPCNT9  puls    DP               ;  SET "DP" REGISTER TO RAM
-         SETDP   $C8              ;  .
+         direct  $C8              ;  .
 ;
          lda     <FRAME           ;  ROTATE FIREBALL
          anda    #$01             ;  .    FORM ROTATION ANGLE
@@ -1718,7 +1723,7 @@ TAIL1    orcc    #$01             ;  SET 'C' TO '1' - MORE GAME LOGIC
 ;        SHIP EXPLOSION HANDLER
 ;        ----------------------
 ;
-         SETDP   $D0
+         direct  $D0
 ;
 DSHPEXP  pshs    A,X,Y            ;  SAVE ENTRY VALUES
          ldx     #WSHIPY          ;  POSITION TO CENETER OF EXPLOSION
@@ -1747,7 +1752,7 @@ DSHPEXP  pshs    A,X,Y            ;  SAVE ENTRY VALUES
 ;        RETURN VALUES:
 ;             SAME AS ENTRY VALUES
 ;
-         SETDP   $C8
+         direct  $C8
 ;        =====   ===
 ;
 SETEXP   pshs    A,B,X            ;  SAVE ENTRY VALUES
@@ -1798,7 +1803,7 @@ STEX4    puls    A,B,X,PC         ;  RETURN TO CALLER
 ;             Y = 'Y' DISPLACEMENT VALUE (MSB/LSB)
 ;             X = 'X' DISPLACEMENT VALUE (MSB/LSB)
 ;
-         SETDP   $C8
+         direct  $C8
 ;        =====   ===
 ;
 MLTY8    pshs    A,B,X,Y          ;  SAVE ENTRY VALUES
@@ -1852,13 +1857,13 @@ MLTY16   pshs    A,B,X,Y          ;  SAVE ENTRY VALUES
 ;
 SWPINT   lda     #$D0             ;  SET "DP" REGISTER TO I/O
          tfr     A,DP             ;  .
-         SETDP   $D0              ;  .
+         direct  $D0              ;  .
 ;
          jsr     INTPSG           ;  INITIALIZE SOUND GENERATOR
 ;
          lda     #$C8             ;  SET "DP" REGISTER TO RAM
          tfr     A,DP             ;  .
-         SETDP   $C8              ;  .
+         direct  $C8              ;  .
 ;
          clr     <TMR1            ;  CLEAR PROGRAMMABLE TIMERS
          clr     <TMR2            ;  .
@@ -1937,7 +1942,7 @@ SWPROT   lda     <SHIPROT         ;  ROTATE SWEEPER
 ;  FALL THRU STAR FIELD AS LEAD-IN TO NEXT SEQUENCE
 ;  ================================================
 ;
-         SETDP   $C8
+         direct  $C8
 ;        =====   ===
 ;
 FALL     pshs    X,Y              ;  SAVE THE INDEX REGISTERS
@@ -1994,7 +1999,7 @@ FALL5    lda     0,X              ;  .
 ;
          pshs    DP               ;  SET "DP" REGISTER TO I/O
          jsr     DPIO             ;  .
-         SETDP   $D0              ;  .
+         direct  $D0              ;  .
 ;
          jsr     SCRBTH           ;  DISPLAY PLAYER SCORES
 ;
@@ -2004,7 +2009,7 @@ FALL5    lda     0,X              ;  .
          jsr     F.STARS          ;  .
 ;
          puls    DP               ;  SET "DP" REGISTER TO RAM
-         SETDP   $C8              ;  .
+         direct  $C8              ;  .
 ;  
 FALL91   lda     <WSHIPY          ;  FALL-THRU COMPLETED ?
          lbne    FALL1            ;  .
@@ -2049,7 +2054,7 @@ ST.101   stx     Y++
 ;        RETURN VALUES
 ;             SAME AS ENTRY
 ;
-         SETDP   $D0
+         direct  $D0
 ;        =====   ===
 ;
 F.STARS  pshs    A,B,X,DP         ;  SAVE ENTRY VALUES
@@ -2073,7 +2078,7 @@ ST.201   inc     X+               ;  .
 ;        RETURN VALUES
 ;             SAME AS ENTRY
 ;
-         SETDP   $D0
+         direct  $D0
 ;        =====   ===
 ;
 D.STARS  pshs    A,B,X,DP         ;  SAVE ENTRY VALUES
@@ -2129,7 +2134,7 @@ ST.010   jsr     ZERGND           ;  TURN-OFF CRT GUN AND ZERO INTEGRATORS
 ;        RETURN VALUES
 ;             SAME AS ENTRY
 ;
-         SETDP   $D0
+         direct  $D0
 ;        =====   ===
 ;
 H.STARS  pshs    A,B,X,DP         ;  SAVE ENTRY VALUES
@@ -2179,7 +2184,7 @@ ST.210   jsr     ZERGND           ;  TURN-OFF CRT GUN AND ZERO INTEGRATORS
 ;  DETERMINE RANDOM 'Y:X' POSITION
 ;  ===============================
 ;
-         SETDP   $C8
+         direct  $C8
 ;        =====   ===
 ;
 RANPOS   pshs    D                ;  SAVE ENTRY VALUES
@@ -2208,7 +2213,7 @@ RANPOS1  jsr     RANDOM           ;  'X' POSITION
 ;        RETURN VALUES:
 ;             SAME AS ENTRY VALUES
 ;
-         SETDP   $C8
+         direct  $C8
 ;        =====   ===
 ;
 RANSEED  pshs    A,B,X,Y,U        ;  SAVE ENTRY VALUES
@@ -2313,7 +2318,7 @@ RANS9    puls    A,B,X,Y,U,PC     ;  RETURN TO CALLER
 ;        RETURN VALUES
 ;             B = RANDOM ANGLE WITHIN LIMIT CONES
 ;
-         SETDP   $C8
+         direct  $C8
 ;        =====   ===
 ;
 CONE     pshs    A,B              ;  SAVE ENTRY VALUES
@@ -2347,7 +2352,7 @@ CONE2    addb    1,S              ;  ADD QUADRANT TO DIRECTION
 ;             SAME AS ENTRY VALUES
 ;
 ;
-         SETDP   $D0
+         direct  $D0
 ;        =====   ===
 ;
 ADOT     pshs    A,B              ;  SAVE ENTRY VALUES
@@ -2372,7 +2377,7 @@ ADOT     pshs    A,B              ;  SAVE ENTRY VALUES
 ;             SAME AS ENTRY VALUES
 ;
 ;
-         SETDP   $D0
+         direct  $D0
 ;        =====   ===
 ;
 DDOT     pshs    A,B              ;  SAVE ENTRY VALUES
@@ -2401,7 +2406,7 @@ DDOT     pshs    A,B              ;  SAVE ENTRY VALUES
 ;             SAME AS ENTRY VALUES
 ;
 ;
-         SETDP   $D0
+         direct  $D0
 ;        =====   ===
 ;
 APACK    pshs    A,B,X            ;  SAVE ENTRY VALUES
@@ -2427,7 +2432,7 @@ APACK    pshs    A,B,X            ;  SAVE ENTRY VALUES
 ;             SAME AS ENTRY VALUES
 ;
 ;
-         SETDP   $D0
+         direct  $D0
 ;        =====   ===
 ;
 DPACK    pshs    A,B,X            ;  SAVE ENTRY VALUES
@@ -2452,7 +2457,7 @@ DPACK    pshs    A,B,X            ;  SAVE ENTRY VALUES
 ;             SAME AS ENTRY VALUES
 ;
 ;
-         SETDP   $D0
+         direct  $D0
 ;        =====   ===
 ;
 MESS     pshs    A,B,X,U          ;  SAVE ENTRY VALUES
@@ -2476,7 +2481,7 @@ MESS     pshs    A,B,X,U          ;  SAVE ENTRY VALUES
 ;             SAME AS ENTRY VALUES
 ;
 ;
-         SETDP   $D0
+         direct  $D0
 ;        =====   ===
 ;
 AMESS    pshs    A,B,X,U          ;  SAVE ENTRY VALUES
@@ -2492,7 +2497,7 @@ AMESS    pshs    A,B,X,U          ;  SAVE ENTRY VALUES
 ;  DRAW ACTIVE PLAYER'S SCORES
 ;  ===========================
 ;
-         SETDP   $D0
+         direct  $D0
 ;        =====   ===
 ;
 SCRMES   jsr     INTMAX           ;  SET MAXIMUM INTENSITY
@@ -2514,7 +2519,7 @@ SCRMES   jsr     INTMAX           ;  SET MAXIMUM INTENSITY
 ;  DRAW BOTH PLAYER'S SCORES
 ;  =========================
 ;
-         SETDP   $D0
+         direct  $D0
 ;        =====   ===
 ;
 SCRBTH   jsr     INTMAX           ;  SET MAXIMUM INTENSITY
@@ -2541,7 +2546,7 @@ BOTH9    rts                      ;  RETURN TO CALLER
 ;
 WAIT     jsr     FRWAIT           ;  WAIT FOR FRAME BOUNDARY
          pshs    DP               ;  .
-         SETDP   $D0              ;  .
+         direct  $D0              ;  .
 ;
          jsr     DEFLOK           ;  PREVENT SCAN COLLAPSE
          jsr     SCRMES           ;  DRAW PLAYER'S SCORES
@@ -2555,7 +2560,7 @@ WAIT     jsr     FRWAIT           ;  WAIT FOR FRAME BOUNDARY
 ;
          lda     #$C8             ;  SET "DP" REGISTER TO RAM
          tfr     A,DP             ;  .
-         SETDP   $C8              ;  .
+         direct  $C8              ;  .
 ;
 TIMER    lda     <TMR1            ;  DOWN-COUNT TIMER #1
          beq     DCT2             ;  .    IS TIMER INHIBITED ?
@@ -2587,7 +2592,7 @@ WAIT9    puls    DP,PC            ;  RETURN TO CALLER
 ;  HANDLE BULLET VS. MINE COLLISIONS
 ;  =================================
 ;
-         SETDP   $C8
+         direct  $C8
 ;        =====   ===
 ;
 CBULMIN  lda     <CBULLET         ;  ACTIVE BULLETS ?
@@ -2747,7 +2752,7 @@ CBUL9    jmp     CBUL2            ;  .    TRY NEXT BULLET FOR COLLISION
 ;  HANDLE MINE VS. SHIP COLLISIONS
 ;  ===============================
 ;
-         SETDP   $C8
+         direct  $C8
 ;        =====   ===
 ;
 CMINSHIP lda     <ABORT           ;  GAME ABORTED ?
@@ -2801,7 +2806,7 @@ CMIN4    pshs    Y                ;  FINE COLLISION TEST
 ;  HANDLE SHIP VS. MINE-LAYER COLLISION
 ;  ====================================
 ;
-         SETDP   $C8
+         direct  $C8
 ;        =====   ===
 ;
 CSHPLYR  lda     <ABORT           ;  GAME ABORTED ?
@@ -2842,7 +2847,7 @@ CSHP1    clr     <LAYRSPD         ;  COLLISION DETECTED - RESET MINE-LAYER
 ;  SOUND HANDLER
 ;  =============
 ;
-         SETDP   $D0
+         direct  $D0
 ;        =====   ===
 ;
 SOUND    lda     THRSND           ;  THRUSTER SOUND ?
@@ -3106,7 +3111,7 @@ PMNLVL   dw      MNLVL1           ;  POINTERS TO PLAYERS MINE-LEVEL MESSAGES
 ;==========================================================================JJH
 ;
 ;==========================================================================JJH
-         SETDP   $C8              ;  CODE ADDED - REV. C CHANGES     ======JJH
+         direct  $C8              ;  CODE ADDED - REV. C CHANGES     ======JJH
 ;        =====   ===                                                 ======JJH
 ;                                                                    ======JJH
 REVC.0   lda     #$0C             ;  .    LAST GAME SEQUENCE ?       ======JJH
@@ -3389,7 +3394,7 @@ LAYER    db      $00,$18,$00      ;  LOW RESOLUTION MINE-LAYER PACKET
 ;
 ;==========================================================================JJH
 ;                                                                    ======JJH
-         SETDP   $00              ;  CODE ADDED - REV. B CHANGES     ======JJH
+         direct  $00              ;  CODE ADDED - REV. B CHANGES     ======JJH
 ;        =====   ===                                                 ======JJH
 ;                                                                    ======JJH
 REVB.0   clr     FRAME - 1        ;  .    CLEAR HOUSE FOR RESTART    ======JJH
@@ -3399,7 +3404,7 @@ REVB.0   clr     FRAME - 1        ;  .    CLEAR HOUSE FOR RESTART    ======JJH
 ;==========================================================================JJH
 ;
 ;==========================================================================JJH
-         SETDP   $D0              ;  CODE ADDED - REV. C CHANGES     ======JJH
+         direct  $D0              ;  CODE ADDED - REV. C CHANGES     ======JJH
 ;        =====   ===                                                 ======JJH
 ;                                                                    ======JJH
 REVC.1   lda     SHIPCNT          ;  .    LIMIT NUMBER OF MARKERS    ======JJH
