@@ -18,8 +18,8 @@
 ;
 ;==========================================================================JJH
 
-         org     $0000
          code
+         org     $0000
 
          db      "g GCE 2017", $80       ; 'g' is copyright sign
          dw      LAYTUNE
@@ -46,6 +46,7 @@
          direct  $D0
 ;        =====   ===
 ;
+
 ENTRY    ldx     #ETMP1           ;  CLEAR MEMORY
 CLRALL   clr     ,x+               ;  .
          cmpx    #ENDRAM          ;  .

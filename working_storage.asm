@@ -7,8 +7,8 @@
 ;  *******************************************************
 ;  *******************************************************
 
-         org     $C880
          bss
+         org     $C880
 
 SBTN     db      0                ;  CONTROLLER DEBOUNCE FLAGS
 SJOY     dw      0                ;  JOYSTICK 'BANG' FLAGS
