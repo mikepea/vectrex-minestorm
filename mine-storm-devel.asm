@@ -53,28 +53,13 @@ CLRALL   clr     ,x+               ;  .
          bne     CLRALL           ;  .
 ;
          jsr     I_STARS          ;  INITIALIZE STAR FIELDS
-;
-;==========================================================================JJH
-;        ldx     #HISCOR          ;  CODE DELETED - REV. B CHANGES   ======JJH
-;        jsr     SCLR             ;  .                               ======JJH
-;==========================================================================JJH
-;
-;==========================================================================JJH
-;        nop                      ;  CODE ADDED - REV. B CHANGES     ======JJH
-;        nop                      ;  CODE DELETED - REV. C CHANGES   ======JJH
-;        nop                      ;  .                               ======JJH
-;        nop                      ;  .                               ======JJH
-;        nop                      ;  .                               ======JJH
-;        nop                      ;  .                               ======JJH
-;==========================================================================JJH
-;
          inc     ZSKIP            ;  SET POST-PACKET ZEROING FLAG
 ;
          lda     #$BB             ;  SET-UP CONTROLLER FLAGS
          sta     SBTN             ;  .
          ldx     #$0101           ;  .
          stx     SJOY             ;  .
-;
+
 ;
 ;  INITIALIZE MINE-SWEEPER
 ;  =======================
@@ -110,14 +95,6 @@ GAME1    jsr     DPRAM            ;  SET "DP" REGISTER FOR RAM
          jsr     SCLR             ;  .    .
          ldd     #$0001           ;  .    .
          jsr     SCRADD           ;  .    .
-;
-;==========================================================================JJH
-;        ldx     #MINTBL1         ;  CODE DELETED - REV. C CHANGES   ======JJH
-;        stx     <TBLPTR1         ;  .                               ======JJH
-;        stx     <TBLPTR2         ;  .                               ======JJH
-;==========================================================================JJH
-;
-;==========================================================================JJH
          ldx     #MINTBL1         ;  CODE ADDED - REV. C CHANGES     ======JJH
          stx     <TBLPTR1         ;  .    SET-UP NEW MINE TABLES     ======JJH
          ldx     #MINTBL2         ;  .    .                          ======JJH
@@ -125,15 +102,13 @@ GAME1    jsr     DPRAM            ;  SET "DP" REGISTER FOR RAM
          ldb     #$08             ;  .    CLEAR NEW MINE TABLES      ======JJH
          ldx     #MINTBL1         ;  .    .                          ======JJH
          jsr     BCLR             ;  .    .                          ======JJH
-;==========================================================================JJH
-;
          lda     #5               ;  SET SHIP COUNT
          sta     <SHIPCNT         ;  .
          sta     <SHIPCNT0        ;  .
          sta     <SHIPCNT1        ;  .
 ;
          bra     LVLN1            ;  LEVEL #1 ENTRY POINT IS DIFFERENT
-;   
+
 ;
 ;  GAME LEVEL SEQUENCER
 ;  ====================
@@ -144,16 +119,7 @@ LEVELN   jsr     FALL             ;  FALL-THRU TO NEXT GAME LEVEL
          ldy     #TBLPTR1         ;  BUMP GAME DATA POINTER FOR ACTIVE PLAYER
          lda     <ACTPLY          ;  .
          ldx     a,y             ;  .
-;
-;==========================================================================JJH
-;        leax    4,x             ;  CODE DELETED - REV. C CHANGES   ======JJH
-;        stx     a,y             ;  .                               ======JJH
-;==========================================================================JJH
-;
-;==========================================================================JJH
          jsr     REVC_0           ;  CODE ADDED - REV. C CHANGES     ======JJH
-;==========================================================================JJH
-;
          ldx     #PMNLVL          ;  BUMP ACTIVE MINE-FIELD COUNTER
          lda     <ACTPLY          ;  .    WHICH PLAYER IS ACTIVE ?
          ldx     a,x             ;  .    .
@@ -171,12 +137,6 @@ LVLN1    jsr     SWPINT           ;  ENTRY FOR LEVEL RE-START
          ldx     #TBLPTR1         ;  .    SET-UP FOR NEXT GAME LEVEL
          lda     <ACTPLY          ;  .    .    WHICH PLAYER IS ACTIVE
          ldx     a,x             ;  .    .    .
-;
-;==========================================================================JJH
-;        lda     0,x             ;  CODE DELETED - REV. C CHANGES   ======JJH
-;        bmi     LVLN2            ;  .                               ======JJH
-;==========================================================================JJH
-;
          jsr     MINLAY           ;  INITIALIZE FOR GAME LEVEL
          bra     LVLN3            ;  .
 ;
@@ -192,11 +152,6 @@ LVLN2    ldd     <TIMEOUT         ;  LOCK-UP ON GAME SEQUENCE
          jsr     MESS             ;  .    .
          puls    dp               ;  .    .
 ;
-;==========================================================================JJH
-;        lda     <TRIGGR          ;  CODE DELETED - REV. B CHANGES   ======JJH
-;        beq     LVLN3            ;  .                               ======JJH
-;==========================================================================JJH
-;
          ldx     #SCOR1           ;  ESCAPE FROM GAME LEVEL LOCK-UP
          ldu     #HISCOR          ;  .    IS PLAYER #1 SCORE HIGHEST ?
          jsr     HISCR            ;  .    .
@@ -204,27 +159,15 @@ LVLN2    ldd     <TIMEOUT         ;  LOCK-UP ON GAME SEQUENCE
          ldx     #SCOR2           ;  .    IS PLAYER #2 SCORE HIGHEST ?
          ldu     #HISCOR          ;  .    .
          jsr     HISCR            ;  .    .
-;
-;==========================================================================JJH
          lda     <TRIGGR          ;  CODE ADDED - REV. B CHANGES     ======JJH
          beq     LVLN3            ;  .                               ======JJH
-;==========================================================================JJH
 ;
 LVLN21   ldd     <TIMEOUT         ;  LOCK TIME-OUT ?
          lbne    NEWGAME          ;  .    START GAME OVER
-;
-;==========================================================================JJH
-;        clr     $CBFE            ;  CODE DELETED - REV. B CHANGES   ======JJH
-;        jmp     $F01C            ;  .                               ======JJH
-;==========================================================================JJH
-;
-;==========================================================================JJH
          jmp     REVB_0           ;  CODE ADDED - REV. B CHANGES     ======JJH
          nop                      ;  .    FILLER                     ======JJH
          nop                      ;  .    .                          ======JJH
          nop                      ;  .    .                          ======JJH
-;==========================================================================JJH
-;
 ;
 LVLN3    pshs    dp               ;  SAVE "DP" REGISTER
          jsr     WAIT             ;  WAIT FOR FRAME BOUNDARY
@@ -247,8 +190,9 @@ LVLN3    pshs    dp               ;  SAVE "DP" REGISTER
          lda     <LOCK            ;  .    .    LOCK-UP ON GAME SEQUENCE ?
          lbne    LVLN2            ;  .    .    .
          jmp     LVLN1            ;  .    .    RESTART GAME SEQUENCE
-;
-;
+
+
+
 ;  ***********************************************
 ;  ***********************************************
 ;  ***                                         ***
@@ -256,9 +200,8 @@ LVLN3    pshs    dp               ;  SAVE "DP" REGISTER
 ;  ***                                         ***
 ;  ***********************************************
 ;  ***********************************************
-;
-;
-;
+
+
 ;  HANDLE MINE-LAYING SEQUENCE
 ;  ===========================
 ;
@@ -370,8 +313,8 @@ MNLY6    pshs    dp               ;  .    WAIT FOR FRAME BOUNDARY
          bra     MNLY4            ;  .    .
 ;
 MNLY7    rts                      ;  RETURN TO CALLER
-;
-;
+
+
 ;  INITIAL MINE INSERTION
 ;  ======================
 ;
@@ -432,7 +375,10 @@ INSINT5  sta     MIN_T2,u        ;  .    .    .    .
          sty     <STAR3           ;  .    .
 ;
 INSINT9  rts                      ;  RETURN TO CALLER
-;
+
+
+;  SOME DATA
+;  =======================
 ;
 MINSZ    db      0                ;  MINE SIZE TABLE
          db      MIN_SIZ3         ;  .    SMALL
@@ -463,8 +409,8 @@ MINOBJ   dw      MINE1            ;  MINE PACKET TABLE
          dw      MINE2            ;  .
          dw      MINE3            ;  .
          dw      MINE4            ;  .
-;
-;
+
+
 ;  STAR-SWEEPER GAME LOGIC
 ;  =======================
 ;
@@ -572,8 +518,8 @@ SHPON1   lda     #$D0             ;  SET "DP" REGISTER TO I/O
          jsr     DPACK            ;  .    DRAW PACKET
 ;
 SHPON2   puls    dp,pc            ;  RETURN TO CALLER
-;
-;
+
+
 ;  HYPER-SPACE SEQUENCE
 ;  ====================
 ;
@@ -624,8 +570,8 @@ HYPER31  clr     <HYPCNT          ;  HYPER-SPACE SEQUENCE DONE
 ;
          puls    dp,pc            ;  RETURN TO CALLER
 
-;
-;
+
+
 ;  MINE-LAYER GAME LOGIC
 ;  =======================
 ;
@@ -639,19 +585,10 @@ MSHIP    lda     LAYRSPD          ;  IS THE MINE-LAYER ON-SCREEN ?
          lda     #$C8             ;  SET "DP" REGISTER TO RAM
          tfr     a,dp             ;  .
          direct  $C8              ;  .
-;
-;==========================================================================JJH
-;        lda     <LAYRSPD         ;  CODE DELETED - REV. C CHANGES   ======JJH
-;        beq     MSHIP1           ;  .                               ======JJH
-;==========================================================================JJH
-;
-;==========================================================================JJH
          nop                      ;  CODE ADDED - REV. C CHANGES     ======JJH
          nop                      ;  .                               ======JJH
          nop                      ;  .                               ======JJH
          nop                      ;  .                               ======JJH
-;==========================================================================JJH
-;
          ldd     <WLAYRY          ;  MOVE SHIP 'Y' AXIS
          addd    <DLAYRY          ;  .
          std     <WLAYRY          ;  .
@@ -672,11 +609,11 @@ MSHIP    lda     LAYRSPD          ;  IS THE MINE-LAYER ON-SCREEN ?
          jsr     APACK            ;  .    DRAW PACKET
 ;
 MSHIP1   rts                      ;  RETURN TO CALLER
-;
-;
+
+
 ;  MINE-LAYER PARAMETER MODIFICATIONS
 ;  ==================================
-;
+
 ;        FIRST MINE-LAYER MOTION MODIFICATION
 ;        ------------------------------------
 ;
@@ -699,8 +636,8 @@ BEGLAYR:
          clr     <WLAYRX + 1      ;  .    .
 ;
          bra     INSLYR6          ;  FETCH MOTION MODIFICATIONS
-;
-;
+
+
 ;        GENERAL MINE-LAYER MOTION MODIFICATIONS
 ;        ---------------------------------------
 ;
@@ -786,8 +723,8 @@ INSLYR7  ldb     <LAYRDIR         ;  CALCULATE SHIP DISPLACEMENTS FOR SPEED
          stx     <DLAYRX          ;  .    .    SAVE 'X' DISPLACEMENT
 ;
          rts                      ;  .    RETURN TO CALLER
-;
-;
+
+
 ;        RE-SEEDED MINE GROWTH HANDLER
 ;        -----------------------------
 ;
@@ -806,8 +743,8 @@ RSGROW:
          stx     <TMR1 + 1        ;  .
 ;
          rts                      ;  .    RETURN TO CALLER
-;
-;
+
+
 ;        FORCED MINE GROWTH HANDLER
 ;        --------------------------
 ;
@@ -834,8 +771,8 @@ FRC2     ldu     #TBLPTR1         ;  GROW FEATURED MINE
          jsr     RANSEED          ;  .    FIND AND SET ENTRY
 ;
 FRC9     rts                      ;  .    RETURN TO CALLER
-;
-;
+
+
 ;        MINE-LAYER RE-SEEDING SEQUENCES
 ;        -------------------------------
 ;
@@ -896,8 +833,8 @@ RESEED4  dw      $0080            ;  RE-SEED SEQUENCE #4
          db      $20,$00,$30      ;  .
          db      $40,$38,$50      ;  .
          db      $7F,$1C,$70      ;  .
-;
-;
+
+
 ;  BULLET GAME LOGIC
 ;  =================
 ;
@@ -961,8 +898,8 @@ GBLT4    lda     ABORT            ;  .    ZERO ENTRY FOUND, GAME ABORTED ?
          sta     BLT_DC,u        ;  .    .    .
          inc     CBULLET          ;  .    .    BUMP ACTIVE BULLET COUNTER
          bra     GBLT2            ;  .    .
-;
-;
+
+
 ;  MINE GAME LOGIC
 ;  ===============
 ;
@@ -990,7 +927,7 @@ GMIN3    lbmi    MINIT            ;  .    MINE MOVING TO INITIAL POSITION ?
          lbne    MWAIT            ;  .    .
          bita    #$01             ;  .    MINE COLLISION DETECTED ?
          lbne    MBOOM            ;  .    .
-;        
+;
 MMOVE    lda     MIN_PAK,u       ;  MINE IN MOTION
 ;
          cmpa    #FIRBALL         ;  .    'RELEASED' FIRE-BALL ?
@@ -1149,8 +1086,8 @@ MBOOM    clr     MIN_FLG,u       ;  HANDLE MINE COLLISION
          puls    a,dp             ;  .
 ;
 MBOOM9   jmp     GMIN2            ;  .    DO NEXT MINE ENTRY
-;
-;
+
+
 ;  TAIL-END OF GAME LOGIC SEQUENCE
 ;  ===============================
 ;
@@ -1265,19 +1202,11 @@ STAIL    pshs    dp               ;  SHORT 'TAIL' ENTRY
 SHPCNT0  jsr     INT3Q            ;  DISPLAY REMAINING SHIPS
          ldx     #$8038           ;  .    SET INITIAL POSITION
          stx     TEMP2            ;  .    .
-;==========================================================================JJH
-;        lda     SHIPCNT          ;  CODE DELETED - REV. C CHANGES   ======JJH
-;        beq     SHPCNT9          ;  .                               ======JJH
-;        sta     TEMP1            ;  .                               ======JJH
-;==========================================================================JJH
-;
-;==========================================================================JJH
          jsr     REVC_1           ;  CODE ADDED - REV. C CHANGES     ======JJH
          beq     SHPCNT9          ;  .                               ======JJH
          nop                      ;  .                               ======JJH
          nop                      ;  .                               ======JJH
          nop                      ;  .                               ======JJH
-;==========================================================================JJH
 ;
 SHPCNT1  dec     TEMP1            ;  .    DRAW THIS SHIP ?
          beq     SHPCNT9          ;  .    .
@@ -1308,28 +1237,18 @@ SHPCNT9  puls    dp               ;  SET "DP" REGISTER TO RAM
          bne     TAIL1            ;  .    EXPLOSIONS DONE ?
          lda     <ABORT           ;  .    GAME ABORTED ?
          bne     TAIL0            ;  .    .
-;
-;==========================================================================JJH
-;        ldb     <CMINES          ;  CODE DELETED - REV. C CHANGES   ======JJH
-;        bne     TAIL1            ;  .                               ======JJH
-;        ldb     <MINMAX          ;  .                               ======JJH
-;        bne     TAIL1            ;  .                               ======JJH
-;==========================================================================JJH
-;
-;==========================================================================JJH
          ldb     <CMINES          ;  CODE ADDED - REV. C CHANGES     ======JJH
          orb     <MINMAX          ;  .                               ======JJH
          orb     <LAYRSPD         ;  .                               ======JJH
          bne     TAIL1            ;  .                               ======JJH
-;==========================================================================JJH
 ;
 TAIL0    andcc   #$FE             ;  SET 'C' TO '0' - LEVEL COMPLETE
          rts                      ;  .    RETURN TO CALLER
 ;
 TAIL1    orcc    #$01             ;  SET 'C' TO '1' - MORE GAME LOGIC
          rts                      ;  .    RETURN TO CALLER
-;
-;
+
+
 ;        SHIP EXPLOSION HANDLER
 ;        ----------------------
 ;
@@ -1349,8 +1268,8 @@ DSHPEXP  pshs    a,x,y           ;  SAVE ENTRY VALUES
          jsr     TPACK            ;  .
 ;
          puls    a,x,y,pc         ;  RETURN TO CALLER
-;
-;
+
+
 ;  SET EXPLOSION IN TABLE
 ;  ======================
 ;
@@ -1400,8 +1319,8 @@ STEX3    lda     0,s              ;  .    SET STARTING EXPLOSION SIZE
          inc     EXPLSND          ;  .    TRIGGER EXPLOSION SOUND
 ;
 STEX4    puls    a,b,x,pc         ;  RETURN TO CALLER
-;
-;
+
+
 ;  FORM 'YX' DISPLACEMENTS
 ;  =======================
 ;
@@ -1459,8 +1378,8 @@ MLTY16   pshs    a,b,x,y         ;  SAVE ENTRY VALUES
          std     2,s              ;  .    .    .
 ;
          puls    a,b,x,y,pc       ;  .    RETURN TO CALLER
-;
-;
+
+
 ;  INITIALIZE STAR-SWEEPER
 ;  =======================
 ;
@@ -1514,8 +1433,8 @@ CLROBJ   clr     ,x+               ;  .
 ;
          ldx     #BEGLAYR         ;  SET-UP FOR FIRST MINE-LAYER MODIFICATION
          stx     <TMR3 + 1        ;  .
-;
-;
+
+
 ;  RESET STAR-SWEEPER PARAMETERS
 ;  =============================
 ;
@@ -1547,8 +1466,8 @@ SWPROT   lda     <SHIPROT         ;  ROTATE SWEEPER
          stx     DBLTX            ;  .    .    SAVE 'X' DISPLACEMENT
 ;
          rts                      ;  RETURN TO CALLER
-;
-;
+
+
 ;  FALL THRU STAR FIELD AS LEAD-IN TO NEXT SEQUENCE
 ;  ================================================
 ;
@@ -1578,7 +1497,7 @@ FALL11   sta     <WSHIPY          ;  .    .    .
 ;
 FALL2    lda     <WSHIPX          ;  .    'X' AXIS
          beq     FALL3            ;  .    .
-         bmi     FALL20           ;  .    
+         bmi     FALL20           ;  .
          deca                     ;  .    .    CURRENT POSITION POSITIVE
          bra     FALL21           ;  .    .    .
 ;
@@ -1620,7 +1539,7 @@ FALL5    lda     0,x             ;  .
 ;
          puls    dp               ;  SET "DP" REGISTER TO RAM
          direct  $C8              ;  .
-;  
+;
 FALL91   lda     <WSHIPY          ;  FALL-THRU COMPLETED ?
          lbne    FALL1            ;  .
          lda     <WSHIPX          ;  .
@@ -1632,8 +1551,8 @@ FALL91   lda     <WSHIPY          ;  FALL-THRU COMPLETED ?
 ;
          jsr     SWPINT           ;  RESET VALUES
          puls    x,y,pc           ;  .    RETURN TO CALLER
-;
-;
+
+
 ;  INITIALIZE STAR FIELDS
 ;  ======================
 ;
@@ -1652,8 +1571,8 @@ ST_101   stx     ,y++
          decb
          bne     ST_101
          rts
-;
-;
+
+
 ;  ZOOM STAR FIELDS FORWARD AND DISPLAY
 ;  ====================================
 ;
@@ -1676,8 +1595,8 @@ ST_201   inc     ,x+               ;  .
          bne     ST_201           ;  .
 ;
          bra     DSTARS1          ;  DISPLAY NEW STAR FIELDS
-;
-;
+
+
 ;  DISPLAY STAR FIELDS
 ;  ===================
 ;
@@ -1732,8 +1651,8 @@ ST_010   jsr     ZERGND           ;  TURN-OFF CRT GUN AND ZERO INTEGRATORS
          jsr     INTMAX           ;  SET BRIGHTNESS
          jsr     DIFDOT           ;  DRAW STAR FIELD
          bra     ST_000           ;  SET-UP FOR NEXT STAR-FIELD
-;
-;
+
+
 ;  DISPLAY STAR FIELDS FOR HYPERSPACE SEQUENCE
 ;  ===========================================
 ;
@@ -1789,8 +1708,8 @@ ST_210   jsr     ZERGND           ;  TURN-OFF CRT GUN AND ZERO INTEGRATORS
          jsr     INTMAX           ;  SET BRIGHTNESS
          jsr     DIFDOT           ;  DRAW STAR FIELD
          bra     ST_200           ;  SET-UP FOR NEXT STAR-FIELD
-;
-;
+
+
 ;  DETERMINE RANDOM 'Y:X' POSITION
 ;  ===============================
 ;
@@ -1811,8 +1730,8 @@ RANPOS1  jsr     RANDOM           ;  'X' POSITION
 ;
          puls    d                ;  RETURN TO CALLER
          rts                      ;  .
-;
-;
+
+
 ;  SELECT RANDOM SEED/MINE ENTRY
 ;  =============================
 ;
@@ -1917,8 +1836,8 @@ RANS4    lda     <ETMP5 + 1       ;  .    CALCULATE MINE SCORE VALUE
          sta     <FRCTIME         ;  .    .    .
 ;
 RANS9    puls    a,b,x,y,u,pc     ;  RETURN TO CALLER
-;   
-;
+
+
 ;  SELECT DIRECTION WITHIN LIMIT CONES
 ;  ===================================
 ;
@@ -1950,8 +1869,8 @@ CONE1    cmpb    #$0C             ;  .    TEST AGAINST UPPER-END LIMIT
 CONE2    addb    1,s              ;  ADD QUADRANT TO DIRECTION
          stb     1,s              ;  .
          puls    a,b,pc           ;  .    RETURN TO CALLER
-;
-;
+
+
 ;  POSITION AND DRAW DOT
 ;  =====================
 ;
@@ -1975,8 +1894,8 @@ ADOT     pshs    a,b              ;  SAVE ENTRY VALUES
          jsr     ZERGND           ;  ZERO INTEGRATORS
 ;
          puls    a,b,pc           ;  RETURN TO CALLER
-;
-;
+
+
 ;  POSITION WITH 16-BIT VALUES AND DRAW DOT
 ;  ========================================
 ;
@@ -2002,8 +1921,8 @@ DDOT     pshs    a,b              ;  SAVE ENTRY VALUES
          jsr     ZERGND           ;  ZERO INTEGRATORS
 ;
          puls    a,b,pc           ;  RETURN TO CALLER
-;
-;
+
+
 ;  POSITION AND DRAW PACKET
 ;  ========================
 ;
@@ -2028,8 +1947,8 @@ APACK    pshs    a,b,x           ;  SAVE ENTRY VALUES
          jsr     TPACK            ;  .    DRAW PACKET
 ;
          puls    a,b,x,pc         ;  RETURN TO CALLER
-;
-;
+
+
 ;  POSITION WITH 16-BIT VALUES AND DRAW PACKET
 ;  ===========================================
 ;
@@ -2055,8 +1974,8 @@ DPACK    pshs    a,b,x           ;  SAVE ENTRY VALUES
          jsr     TPACK            ;  .    DRAW PACKET
 ;
          puls    a,b,x,pc         ;  RETURN TO CALLER
-;
-;
+
+
 ;  DRAW COMPACT RASTER MESSAGE
 ;  ===========================
 ;
@@ -2078,8 +1997,8 @@ MESS     pshs    a,b,x,u         ;  SAVE ENTRY VALUES
          jsr     RSTSIZ           ;  DRAW RASTER MESSAGE
 ;
          puls    a,b,x,u,pc       ;  RETURN TO CALLER
-;
-;
+
+
 ;  POSITION AND DRAW RASTER MESSAGE
 ;  ================================
 ;
@@ -2102,8 +2021,8 @@ AMESS    pshs    a,b,x,u         ;  SAVE ENTRY VALUES
          jsr     RASTER           ;  .    DRAW PACKET
 ;
          puls    a,b,x,y,pc       ;  RETURN TO CALLER
-;
-;
+
+
 ;  DRAW ACTIVE PLAYER'S SCORES
 ;  ===========================
 ;
@@ -2124,8 +2043,8 @@ SCRMES   jsr     INTMAX           ;  SET MAXIMUM INTENSITY
          bsr     AMESS            ;  .
 ;
          rts                      ;  RETURN TO CALLER
-;
-;
+
+
 ;  DRAW BOTH PLAYER'S SCORES
 ;  =========================
 ;
@@ -2148,8 +2067,8 @@ SCRBTH   jsr     INTMAX           ;  SET MAXIMUM INTENSITY
          bsr     AMESS            ;  .    .
 ;
 BOTH9    rts                      ;  RETURN TO CALLER
-;
-;
+
+
 ;  WAIT FOR FRAME BOUNDARY AND INPUT FROM CONTROLLER
 ;  =================================================
 ;
@@ -2197,8 +2116,8 @@ DCT4     lda     <TMR4            ;  DOWN-COUNT TIMER #4
          jsr     [TMR4+1]         ;  .    EXECUTE THE USER PROGRAM
 ;
 WAIT9    puls    dp,pc            ;  RETURN TO CALLER
-;
-;
+
+
 ;  HANDLE BULLET VS_ MINE COLLISIONS
 ;  =================================
 ;
@@ -2357,8 +2276,8 @@ CBUL7    lda     #$01             ;  'DUMB' OR 'MAGNETIC' MINE COLLISION
          dec     <CMINES          ;  .    DECREMENT ACTIVE MINE COUNT
          dec     <CBULLET         ;  .    DECREMENT ACTIVE BULLET COUNT
 CBUL9    jmp     CBUL2            ;  .    TRY NEXT BULLET FOR COLLISION
-;
-;
+
+
 ;  HANDLE MINE VS_ SHIP COLLISIONS
 ;  ===============================
 ;
@@ -2411,8 +2330,8 @@ CMIN4    pshs    y                ;  FINE COLLISION TEST
 ;
          dec     <CMINES          ;  DECREMENT ACTIVE MINE COUNT
          bra     CMIN3            ;  TRY NEXT MINE ENTRY
-;
-;
+
+
 ;  HANDLE SHIP VS_ MINE-LAYER COLLISION
 ;  ====================================
 ;
@@ -2451,9 +2370,9 @@ CSHP1    clr     <LAYRSPD         ;  COLLISION DETECTED - RESET MINE-LAYER
          inc     EXPLSND          ;  SET EXPLOSION SOUND FLAG
 ;
          rts                      ;  RETURN TO CALLER
-;
-;   
-;
+
+
+
 ;  SOUND HANDLER
 ;  =============
 ;
@@ -2520,8 +2439,8 @@ STTNB    ldd     #$0900           ;  .    SET 'B' AMPLITUDE = $00
          jsr     WRREG            ;  .    .
 ;
 RUSND    rts                      ;  RETURN TO CALLER
-;     
-;
+
+
 ;        SOUND LIBRARY
 ;        -------------
 ;
@@ -2566,8 +2485,8 @@ SS_POP   dw      $0000            ;  MINE 'POP' SOUND
          dw      $0C00            ;  .
          dw      $0D00            ;  .
          db      $FF              ;  .    TERMINATOR
-;
-;
+
+
 ;       LAYER TUNE
 ;       ----------
 ;
@@ -2607,7 +2526,8 @@ PSCRPTR  dw      PSCOR1           ;  SCREEN POSITIONS OF PLAYER SCORES
 ;
 PMNLVL   dw      MNLVL1           ;  POINTERS TO PLAYERS MINE-LEVEL MESSAGES
          dw      MNLVL2           ;  .
-;
+
+
 ;==========================================================================JJH
 ;                                   =======================================JJH
 ;  GAME SEQUENCE PARAMETER TABLES   ==  DELETED - REV. C CHANGES  =========JJH
@@ -2752,14 +2672,11 @@ REVC_0   lda     #$0C             ;  .    LAST GAME SEQUENCE ?       ======JJH
          stb     3,x             ;  .    .                          ======JJH
 ;                                                                    ======JJH
 REVC_09  rts                      ;  .    RETURN TO CALLER           ======JJH
-;==========================================================================JJH
-;
+
 ;==========================================================================JJH
          ds      8                ;  CODE ADDED - REV. C CHANGES     ======JJH
 ;==========================================================================JJH
-;
-;
-;
+
 ;  STAR-FIELD TABLES
 ;  =================
 ;
@@ -2803,8 +2720,8 @@ STAR_8   db      $B8,$40          ;  STAR FIELD #8
          db      $15,$80          ;  .
          db      $40,$F8          ;  .
          db      $40,$18          ;  .
-;
-;
+
+
 ;  RASTER MESSAGES
 ;  ===============
 ;
@@ -2816,10 +2733,10 @@ M_MNFLD  dw      $FA38
 M_END    dw      $FA38
          dw      $E0D8
          db      "GAME OVER",$80
-;
-;
-;
-;
+
+
+
+
 ;  MINES
 ;  =====
 ;
@@ -2873,8 +2790,8 @@ MINE5    db      $00,$3F,$00      ;  'RELEASED FIRE-BALL' MINE
          db      $00,$3F,$3F      ;  .
          db      $FF,$00,$80      ;  .
          db      $01              ;  .    PACKET TERMINATOR
-;
-;
+
+
 ;  EXPLOSION CLOUD
 ;  ===============
 ;
@@ -2896,8 +2813,8 @@ EXPLODE  db      $FF,$7F,$20
          db      $FF,$D0,$50
          db      $FF,$20,$F0
          db      $01
-;
-;
+
+
 ;  STAR-SWEEPER SHIP
 ;  =================
 ;
@@ -2911,8 +2828,8 @@ NSHIP    db      $00,$3F,$00      ;  ANOTHER NEW SHIP
          db      $FF,$28,$D8      ;  .
          db      $FF,$3C,$08      ;  .
          db      $01              ;  .
-;
-;
+
+
 ;        SHIP PACKETS FOR EXPLOSION
 ;        --------------------------
 ;
@@ -2933,8 +2850,8 @@ SHPEX4   db      $00,$04,$F8
          db      $FF,$D8,$28
          db      $FF,$20,$00
          db      $01
-;
-;
+
+
 ;  MINE-LAYER
 ;  ==========
 ;
@@ -3000,8 +2917,8 @@ LAYER    db      $00,$18,$00      ;  LOW RESOLUTION MINE-LAYER PACKET
          db      $FF,$39,$6D      ;  .
          db      $FF,$00,$20      ;  .
          db      $01              ;  .    PACKET TERMINATOR
-;
-;
+
+
 ;==========================================================================JJH
 ;                                                                    ======JJH
          direct  $00              ;  CODE ADDED - REV. B CHANGES     ======JJH
@@ -3027,6 +2944,5 @@ REVC_11  sta     TEMP1            ;  .    .                          ======JJH
 ;                                                                    ======JJH
 REVC_19  rts                      ;  .    RETURN TO CALLER           ======JJH
 ;==========================================================================JJH
-;
-;
+
          end
